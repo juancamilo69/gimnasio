@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Tipomembresias;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/sedes', function () {
     return view('sedes');
@@ -34,6 +35,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/viewAdmin', function () {
+    return view('viewAdmin');
+})->middleware(['auth', 'verified'])->name('viewAdmin');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -44,5 +49,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/dashboard', [App\Http\Controllers\infoMembresiasController::class, 'index'])->name('dashboard');
 
+Route::get('/', function () {
+    $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
+    return view('welcome', ['membresiasData' => $membresiasData]);
+});
 
 require __DIR__.'/auth.php';

@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .user-img {
     width: 50px;
     border-radius: 100%;
-    border: 1px solid #eee;
+    border: 3px solid #eee;
 }
 
 .sidebar {
@@ -17,7 +17,7 @@
     left: 0;
     height: 100vh;
     width: 80px;
-    background-color: #12171e;
+    background-color: #393939;
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease; 
 }
@@ -29,6 +29,10 @@
 
 .sidebar.active {
     width: 250px;
+}
+
+.contenedor-nav {
+    padding-left: 0;
 }
 
 .sidebar #btn {
@@ -75,6 +79,14 @@
     color: #fff;
     opacity: 1;
     margin-left: 1rem;
+}
+
+.user .p-role{
+    margin-bottom: 0;
+}
+
+.user .user-texto {
+    margin-top: 15px;
 }
 
 .bold {

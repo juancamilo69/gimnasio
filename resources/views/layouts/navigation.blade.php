@@ -18,6 +18,11 @@
                     <x-nav-link :href="route('sedes')" :active="request()->routeIs('sedes')">
                         {{ __('SEDES') }}
                     </x-nav-link>
+                    @role('administrador')
+                    <x-nav-link :href="route('viewAdmin')" :active="request()->routeIs('viewAdmin')">
+                        {{ __('ADMIN') }}
+                    </x-nav-link>
+                    @endrole
                 </div>
             </div>
 
