@@ -36,7 +36,7 @@
 <!-- {{-- Lista o menu. --}} -->    
         <ul class="contenedor-nav">
             <li>
-                <a href="#">
+                <a href="{{route ('clientes')}}">
                     <i class="bx bxs-user"></i>
                     <span class="nav-item">Clientes</span>
                 </a>
