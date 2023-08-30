@@ -39,6 +39,14 @@ Route::get('/viewAdmin', function () {
     return view('viewAdmin');
 })->middleware(['auth', 'verified'])->name('viewAdmin');
 
+Route::get('/planpareja', function () {
+    return view('views-admin/planpareja');
+})->middleware(['auth', 'verified'])->name('planpareja');
+
+Route::get('/membresia', function () {
+    return view('views-admin/membresia');
+})->middleware(['auth', 'verified'])->name('membresia');
+
 Route::get('/clientes', function () {
     return view('views-admin/clientes');
 })->middleware(['auth', 'verified'])->name('clientes');
@@ -52,6 +60,8 @@ Route::middleware('auth')->group(function () {
 // Rutas para información de las membresías
 
 Route::get('/dashboard', [App\Http\Controllers\infoMembresiasController::class, 'index'])->name('dashboard');
+
+Route::get('/clientes', [App\Http\Controllers\clientesController::class, 'index'])->name('clientes');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
