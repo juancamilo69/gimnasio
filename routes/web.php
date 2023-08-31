@@ -43,14 +43,6 @@ Route::get('/planpareja', function () {
     return view('views-admin/planpareja');
 })->middleware(['auth', 'verified'])->name('planpareja');
 
-Route::get('/membresia', function () {
-    return view('views-admin/membresia');
-})->middleware(['auth', 'verified'])->name('membresia');
-
-Route::get('/clientes', function () {
-    return view('views-admin/clientes');
-})->middleware(['auth', 'verified'])->name('clientes');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -62,6 +54,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/dashboard', [App\Http\Controllers\infoMembresiasController::class, 'index'])->name('dashboard');
 
 Route::get('/clientes', [App\Http\Controllers\clientesController::class, 'index'])->name('clientes');
+
+Route::get('/elementos', [App\Http\Controllers\elementosController::class, 'index'])->name('elementos');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();

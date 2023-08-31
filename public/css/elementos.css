@@ -1,0 +1,27 @@
+.card .card-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card .card-text-tipo {
+    font-size: 20px;
+}
+
+.card .card-text-uso {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.card .card-text-fechacompra {
+    font-size: 15px;
+}
+
+.card .card-text-nombresede {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card .card-text-ciudad {
+    font-size: 15px;
+    margin: 0;
+}

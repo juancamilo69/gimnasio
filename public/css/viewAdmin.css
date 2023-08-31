@@ -11,7 +11,7 @@
     border: 3px solid #eee;
 }
 
-.sidebar {
+.sidebar-og {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,12 +22,12 @@
     transition: all 0.5s ease; 
 }
 
-.sidebar.active ~ .main-content {
+.sidebar-og.active ~ .main-content {
     left: 250px;
     width: calc(100% - 250px);
 }
 
-.sidebar.active {
+.sidebar-og.active {
     width: 250px;
 }
 
@@ -35,7 +35,7 @@
     padding-left: 0;
 }
 
-.sidebar #btn {
+.sidebar-og #btn {
     position: absolute;
     color: #fff;
     top: .4rem;
@@ -46,11 +46,11 @@
     cursor: pointer;
 }
 
-.sidebar.active #btn {
+.sidebar-og.active #btn {
     left: 90%;
 }
 
-.sidebar .top .logo {
+.sidebar-og .top .logo {
     color: #fff;
     display: flex;
     height: 50px;
@@ -60,7 +60,7 @@
     opacity: 0;
 }
 
-.sidebar.active .top .logo {
+.sidebar-og.active .top .logo {
     opacity: 1;
 }
 
@@ -93,15 +93,15 @@
     font-weight: 600;
 }
 
-.sidebar p {
+.sidebar-og p {
     opacity: 0;
 }
 
-.sidebar.active p {
+.sidebar-og.active p {
     opacity: 1;
 }
 
-.sidebar ul li {
+.sidebar-og ul li {
     position: relative;
     list-style-type: none;
     height: 50px;
@@ -110,7 +110,7 @@
     line-height: 50px;
 }
 
-.sidebar ul li a {
+.sidebar-og ul li a {
     color: #fff;
     display: flex;
     align-items: center;
@@ -118,12 +118,12 @@
     border-radius: 0.8rem;
 }
 
-.sidebar ul li a:hover {
+.sidebar-og ul li a:hover {
     background-color: #fff;
     color: #12171e;
 }
 
-.sidebar ul li a i {
+.sidebar-og ul li a i {
     min-width: 50px;
     text-align: center;
     height: 50px;
@@ -131,15 +131,15 @@
     line-height: 50px;
 }
 
-.sidebar .nav-item {
+.sidebar-og .nav-item-span {
     opacity: 0;
 }
 
-.sidebar.active .nav-item {
+.sidebar-og.active .nav-item-span {
     opacity: 1;
 }
 
-.sidebar ul li .tooltip {
+.sidebar-og ul li .tooltip-og {
     position: absolute;
     left: 125px;
     top: 50%;
@@ -152,12 +152,13 @@
     opacity: 0;
 }
 
-.sidebar ul li:hover .tooltip {
+.sidebar-og ul li:hover .tooltip-og {
     opacity: 1;
+    
 }
 
-.sidebar.active ul li .tooltip {
-    display: none;
+.sidebar-og.active ul li .tooltip-og {
+    display: none;  
 }
 
 .main-content {

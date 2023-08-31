@@ -10,5 +10,5 @@ class sedes extends Model
     use HasFactory;
 
     protected $primaryKey = 'IDSEDE';
-    protected $fillable = ['CIUDAD', 'DIRECCION'];
+    protected $fillable = ['NOMBRE', 'CIUDAD', 'DIRECCION'];
 }

@@ -18,7 +18,7 @@
 </head>
 <body>
 {{-- Logo, foto de perfil, nombre y cargo. --}}
-    <div class="sidebar">
+    <div class="sidebar-og">
         <div class="top">
             <div class="logo">
                 <i class='bx bx-dumbbell'></i>
@@ -38,30 +38,30 @@
             <li>
                 <a href="{{route ('clientes')}}">
                     <i class="bx bxs-user"></i>
-                    <span class="nav-item">Clientes</span>
+                    <span class="nav-item-span">Clientes</span>
                 </a>
-                <span class="tooltip">Clientes</span>
+                <span class="tooltip-og">Clientes</span>
             </li>
             <li>
                 <a href="#">
                     <i class="bx bx-cycling"></i>
-                    <span class="nav-item">Máquinas</span>
+                    <span class="nav-item-span">Máquinas</span>
                 </a>
-                <span class="tooltip">Máquinas</span>
+                <span class="tooltip-og">Máquinas</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{route ('elementos')}}">
                     <i class="bx bxs-component"></i>
-                    <span class="nav-item">Elementos</span>
+                    <span class="nav-item-span">Elementos</span>
                 </a>
-                <span class="tooltip">Elementos</span>
+                <span class="tooltip-og">Elementos</span>
             </li>
             <li>
                 <a href="{{route ('dashboard')}}">
                     <i class="bx bx-log-out"></i>
-                    <span class="nav-item">Logout</span>
+                    <span class="nav-item-span">Logout</span>
                 </a>
-                <span class="tooltip">Logout</span>
+                <span class="tooltip-og">Logout</span>
             </li>
         </ul>
     </div>
