@@ -43,6 +43,10 @@ Route::get('/planpareja', function () {
     return view('views-admin/planpareja');
 })->middleware(['auth', 'verified'])->name('planpareja');
 
+Route::get('/maquinas', function () {
+    return view('views-admin/maquinas');
+})->middleware(['auth', 'verified'])->name('maquinas');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -54,6 +58,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/dashboard', [App\Http\Controllers\infoMembresiasController::class, 'index'])->name('dashboard');
 
 Route::get('/clientes', [App\Http\Controllers\clientesController::class, 'index'])->name('clientes');
+
+Route::get('/maquinas', [App\Http\Controllers\maquinasController::class, 'index'])->name('maquinas');
 
 Route::get('/elementos', [App\Http\Controllers\elementosController::class, 'index'])->name('elementos');
 

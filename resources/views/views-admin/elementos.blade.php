@@ -7,7 +7,7 @@
 @foreach ($elementos as $elemento)
                 <div class="col" style="width: 30rem;">
                     <div class="card h-100">
-                    <img src="" class="card-img-top" alt="...">
+                    <img src="{{$elemento->IMGELEMENTO}}" class="card-img-top img-fixed-size" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$elemento->nombreElemento}}</h5>
                         <h2 class="card-text-tipo">{{$elemento->TIPO}}</h2>

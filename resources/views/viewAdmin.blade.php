@@ -43,7 +43,7 @@
                 <span class="tooltip-og">Clientes</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{route ('maquinas')}}">
                     <i class="bx bx-cycling"></i>
                     <span class="nav-item-span">Máquinas</span>
                 </a>
