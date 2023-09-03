@@ -1,3 +1,16 @@
+/* Hero */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+/* Cards máquinass */
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
 .card .card-title {
     font-size: 25px;
     font-weight: bold;

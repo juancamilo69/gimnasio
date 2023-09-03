@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reich GYM</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('css/viewAdmin.Css') }}">
+    <link rel="stylesheet" href="{{ asset('css/plantilla-viewAdmin.Css') }}">
     <!-- Default -->
     @extends('default')
 

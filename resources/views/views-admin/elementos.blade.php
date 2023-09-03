@@ -2,11 +2,15 @@
 
 @section('contenido')
 <link rel="stylesheet" href="{{ asset('css/elementos.css') }}">
+<Section class="hero">
+    <h1>Elementos</h1>
+    <h5>Registro de elementos</h5>
+</Section>
 <!-- CARD ELEMENTOS -->
 <div class="cards-membresias-contenedor row row-cols-1 row-cols-md-3 g-4">
 @foreach ($elementos as $elemento)
-                <div class="col" style="width: 25rem;">
-                    <div class="card h-100">
+                <div class="col col-sm-6"">
+                    <div class="card h-100 w-100">
                     <img src="{{$elemento->IMGELEMENTO}}" class="card-img-top img-fixed-size" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$elemento->nombreElemento}}</h5>
