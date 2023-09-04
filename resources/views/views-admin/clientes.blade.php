@@ -18,12 +18,13 @@
             <option value="P1">Plan individual</option>
             <option value="P2">Plan pareja</option>
             </select>
-            <a href="{{route('planpareja')}}"><button class="btn-buscar-filtro">Buscar</button></a>
+            <a href="{{route('planpareja')}}"><button class="btn-buscar-filtro" onclick="cambiarTexto()">Buscar</button></a>
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
             </div>
         </div>
+
     <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
                                     <table id="table" class="table table-hover table align-middle">
                                         <thead class="encabezado-tabla align-middle">

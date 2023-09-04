@@ -4,6 +4,41 @@
     margin-bottom: 50px;
 }
 
+/* Sección filtrar  */
+
+.titulo-filtrar {
+    font-size: 25px;
+}
+
+.select-sedeMaquinas {
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn-buscar-filtro {
+    padding: 5px 15px;
+    background-color: #252525;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+}
+
+/*buscador de cards */
+
+.titulo_input {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#buscador {
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
 /* Cards máquinass */
 
 .card {

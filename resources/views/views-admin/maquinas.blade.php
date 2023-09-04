@@ -1,22 +1,38 @@
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Custom Bootstrap -->
 <link rel="stylesheet" href="{{ asset('css/maquinas.css') }}">
 <!-- Hero Section -->
 <Section class="hero">
     <h1>Máquinas</h1>
     <h5>Registro de máquinas</h5>
 </Section>
+
+        <div>
+            <form action="">
+            <h2 class="titulo-filtrar">Filtrar por:</h2>
+            <select class="select-sedeMaquinas" name="seleccionarSedeMaquinas" id="">
+            <option value="S0" selected>Seleccione sede</option>
+            <option value="S1">Sede Muiscas</option>
+            <option value="S2">Sede Centro</option>
+            <option value="S3">Sede Barbosa</option>
+            </select>
+            <a href=""><button class="btn-buscar-filtro">Buscar</button></a>
+            </form>
+            <div class="titulo_input">
+                <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
+            </div>
+        </div>
 <!-- CARD ELEMENTOS -->
 <div class="cards-membresias-contenedor row row-cols-1 row-cols-md-3 g-4">
     @foreach ($maquinas as $maquina)
-                    <div class="col col-sm-6">
-                        <div class="card h-100 w-100">
-                        @if($maquina->IMGMAQUINA)
+                    <div class="col col-sm-6" id="cardId">
+                        <div class="card h-100 w-100" >
                         <img src="{{$maquina->IMGMAQUINA}}" class="card-img-top img-fixed-size" alt="...">
-                        @else 
-                            Sin imágen malparido
-                        @endif 
                         <div class="card-body">
                             <h5 class="card-title">{{$maquina->NOMBREMAQUINA}}</h5>
                             <h2 class="card-text-grupomuscular">{{$maquina->GRUPOMUSCULAR}}</h2>
@@ -29,7 +45,18 @@
                         </div>
                         </div>
                     </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#buscador").on("keyup", function() {
+                            var value = $(this).val().toLowerCase();
+                            $("#cardId div").filter(function() {
+                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                            });
+                            });
+                        });
+                    </script>          
                     @endforeach
+                    
     </div>
 
 @endsection
