@@ -1,0 +1,87 @@
+/* Vista sedes */
+
+.contenedor-ciudades {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-ciudades .card {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.contenedor-ciudades .card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenedor-ciudades .card-img {
+    filter: brightness(60%);
+}
+
+.contenedor-ciudades .card-ciudad-tunja {
+    margin-right: 10px;
+}
+
+.contenedor-ciudades .card-ciudad-barbosa {
+    margin-left: 10px;
+}
+
+/* Vista sedesTunja */
+
+.contenedor-cards-tunja .card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contenedor-cards-tunja .card {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.contenedor-cards-tunja .card iframe {
+    border-radius: 5px;
+}
+
+/* Vista sedesBarbosa */
+
+.contenedor-cards-barbosa .card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contenedor-cards-barbosa .card {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.contenedor-cards-barbosa .card iframe {
+    border-radius: 5px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 767px) {
+    /* Vista sedes */
+
+    .contenedor-ciudades {
+        flex-direction: column;
+    }
+
+    /* Vista sedesTunja */
+
+    .contenedor-ciudades .card-ciudad-tunja {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    /* Vista sedesBarbosa */
+
+    .contenedor-ciudades .card-ciudad-barbosa {
+        margin-left: 0px;
+    }
+}

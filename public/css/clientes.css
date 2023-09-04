@@ -1,0 +1,110 @@
+/* Hero */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+/* Sección filtrar  */
+
+.titulo-filtrar {
+    font-size: 25px;
+}
+
+.select-membresia {
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn-buscar-filtro {
+    padding: 5px 15px;
+    background-color: #252525;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Tabla y buscador de tabla */
+
+.titulo_input {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#buscador {
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+table th {
+    font-size: 15px;
+}
+
+table td {
+    height: 80px;
+    width: 10%;
+    font-size: 15px;
+}
+
+/* table .td-duracionmembresia,
+.td-planpareja {
+    width: 5%;
+} */
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+#tablaClientes {
+    border-top: 2px solid #252525;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+    /* Tabla y buscador de tabla */
+
+    .titulo_input {
+        flex-direction: column;
+    }
+
+    #buscador {
+        width: 60%;
+        margin: 0;
+    }
+
+    .titulo_input {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    /* Tabla y buscador de tabla */
+
+    .btn-buscar-filtro {
+        display: block;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    /* Tabla y buscador de tabla */
+
+    .btn-buscar-filtro {
+        margin-top: 20px;
+    }
+}

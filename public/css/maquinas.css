@@ -1,0 +1,46 @@
+/* Hero */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+/* Cards máquinass */
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card .card-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card .card-text-grupomuscular {
+    font-size: 20px;
+}
+
+.card .card-text-fechacompra {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.card .card-text-nombresede {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card .card-text-ciudad {
+    font-size: 15px;
+    margin: 0;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.img-fixed-size {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
