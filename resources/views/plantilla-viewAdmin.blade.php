@@ -37,24 +37,38 @@
         <ul class="contenedor-nav">
             <li>
                 <a href="{{route ('clientes')}}">
-                    <i class="bx bxs-user"></i>
+                    <i class="fa-solid fa-user"></i>
                     <span class="nav-item-span">Clientes</span>
                 </a>
                 <span class="tooltip-og">Clientes</span>
             </li>
             <li>
                 <a href="{{route ('maquinas')}}">
-                    <i class="bx bx-cycling"></i>
+                    <i class="fa-solid fa-person-biking"></i>
                     <span class="nav-item-span">Máquinas</span>
                 </a>
                 <span class="tooltip-og">Máquinas</span>
             </li>
             <li>
                 <a href="{{route ('elementos')}}">
-                    <i class="bx bxs-component"></i>
+                    <i class="fa-solid fa-dumbbell"></i>
                     <span class="nav-item-span">Elementos</span>
                 </a>
                 <span class="tooltip-og">Elementos</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-jar"></i>
+                    <span class="nav-item-span">Suplementos</span>
+                </a>
+                <span class="tooltip-og">Suplementos</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-shirt"></i>
+                    <span class="nav-item-span">Ropa</span>
+                </a>
+                <span class="tooltip-og">Ropa</span>
             </li>
             <li>
                 <a href="{{route ('dashboard')}}">
