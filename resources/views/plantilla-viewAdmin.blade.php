@@ -57,7 +57,7 @@
                 <span class="tooltip-og">Elementos</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{route ('suplementos')}}">
                     <i class="fa-solid fa-jar"></i>
                     <span class="nav-item-span">Suplementos</span>
                 </a>
@@ -72,7 +72,7 @@
             </li>
             <li>
                 <a href="{{route ('dashboard')}}">
-                    <i class="bx bx-log-out"></i>
+                    <i class="fa-solid fa-right-from-bracket fa-flip-horizontal"></i>
                     <span class="nav-item-span">Logout</span>
                 </a>
                 <span class="tooltip-og">Logout</span>

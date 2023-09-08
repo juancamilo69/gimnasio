@@ -23,6 +23,9 @@
                         {{ __('ADMIN') }}
                     </x-nav-link>
                     @endrole
+                    <x-nav-link :href="route('suplementos')" :active="request()->routeIs('suplementos')">
+                        {{ __('SUPLEMENTOS') }}
+                    </x-nav-link>
                 </div>
             </div>
 
