@@ -73,6 +73,14 @@ Route::get('/ropaMujer', function () {
     return view('ropaMujer');
 })->middleware(['auth', 'verified'])->name('ropaMujer');
 
+Route::get('/ropaHombre', function () {
+    return view('ropaHombre');
+});
+
+Route::get('/ropaHombre', function () {
+    return view('ropaHombre');
+})->middleware(['auth', 'verified'])->name('ropaHombre');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -92,6 +100,8 @@ Route::get('/elementos', [App\Http\Controllers\elementosController::class, 'inde
 Route::get('/suplementos', [App\Http\Controllers\suplementosController::class, 'index'])->name('suplementos');
 
 Route::get('/ropaMujer', [App\Http\Controllers\ropaMujerController::class, 'index'])->name('ropaMujer');
+
+Route::get('/ropaHombre', [App\Http\Controllers\ropaHombreController::class, 'index'])->name('ropaHombre');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();

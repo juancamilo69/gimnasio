@@ -19,10 +19,10 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                <div class="contenedor-ciudades">
+                <div class="contenedor-seleccionar-sexo">
 
                 <a href="{{ route('ropaMujer') }}">
-                <div class="card card-ciudad-tunja text-bg-dark">
+                <div class="card card-sexo-mujer text-bg-dark">
                 <img src="{{ asset('images/banner/banner-girl1.jpg') }}" class="card-img img-fixed-size" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Mujer</h5>
@@ -30,8 +30,8 @@
                 </div>
                 </a>
 
-                <a href="{{ route('sedesBarbosa') }}"> 
-                <div class="card card-ciudad-barbosa text-bg-dark">
+                <a href="{{ route('ropaHombre') }}"> 
+                <div class="card card-sexo-hombre text-bg-dark">
                 <img src="{{ asset('images/banner/banner1.jpg') }}" class="card-img img-fixed-size" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">Hombre</h5>

@@ -1,7 +1,7 @@
 <x-app-layout>
 
 <!-- Custom Css -->
-<link rel="stylesheet" href="{{ asset('css/suplementos.css') }}">
+<link rel="stylesheet" href="{{ asset('css/ropaMujer.css') }}">
 
 <!-- Defautl Css -->
 @extends('default')
@@ -21,14 +21,14 @@
                 <div class="p-6">
                     <!-- Hero Section -->
 <Section class="hero">
-    <h1>Suplementos</h1>
-    <h5>¡Compra tus suplementos!</h5>
+    <h1>Reich gym mujeres</h1>
+    <h5>¡Compra tu ropa!</h5>
 </Section>
 
         <div>
             <form action="">
             <h2 class="titulo-filtrar">Filtrar por:</h2>
-            <select class="select-suplementos" name="seleccionarRopa" id="">
+            <select class="select-prendas" name="seleccionarRopa" id="">
             <option value="S0" selected>Seleccione ropa</option>
             <option value="Camisetas">Camisetas</option>
             <option value="Esqueletos">Esqueletos</option>
@@ -43,18 +43,18 @@
             </div>
         </div>
 <!-- CARD ELEMENTOS -->
-<div class="cards-suplementos-contenedor row row-cols-1 row-cols-md-3 g-4" id="cardId">
+<div class="cards-ropa-mujer row row-cols-1 row-cols-md-4 g-3" id="cardId">
     @foreach ($prendas as $prenda)
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100" >
                         <img src="{{$prenda->IMGPRENDA1}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{$prenda->NOMBRE}}</h5>
-                            <p>{{$prenda->TIPO}}</p>
-                            <p>{{$prenda->COLOR}}</p>
+                            <p class="card-text-tipo">{{$prenda->TIPO}}</p>
+                            <p class="card-text-color">{{$prenda->COLOR}}</p>
                             <div class="d-flex">
-                            <P class="card-text card-text-precio mt-4"><span>Precio:</span> ${{ number_format($prenda->PRECIO, 0, ',', '.') }}</P>
-                            <button type="button" class="btn btn-dark btn-comprar ms-auto mt-3">Detalles</button>
+                            <P class="card-text card-text-precio mt-4">${{ number_format($prenda->PRECIO, 0, ',', '.') }}</P>
+                            <button type="button" class="btn btn-dark btn-comprar ms-auto ">Detalles</button>
                             </div>
                         </div>
                         </div>

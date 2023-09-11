@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\ropa;
 use DB;
 
-class ropaMujerController extends Controller
+class ropaHombreController extends Controller
 {
     public function index(Request $request) {
         $ropaRequest = $request->seleccionarRopa;
@@ -15,7 +15,7 @@ class ropaMujerController extends Controller
 
         $prendas = DB::table('ropa')
         ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
-        ->where('SEXO', '=', 'Mujer')
+        ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Camisetas')
         ->get();     
 
@@ -23,7 +23,7 @@ class ropaMujerController extends Controller
 
         $prendas = DB::table('ropa')
         ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA','COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
-        ->where('SEXO', '=', 'Mujer')
+        ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Esqueletos')
         ->get();        
 
@@ -31,7 +31,7 @@ class ropaMujerController extends Controller
 
         $prendas = DB::table('ropa')
         ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA','COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
-        ->where('SEXO', '=', 'Mujer')
+        ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Camisetas Oversize')
         ->get();      
 
@@ -39,7 +39,7 @@ class ropaMujerController extends Controller
 
         $prendas = DB::table('ropa')
         ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
-        ->where('SEXO', '=', 'Mujer')
+        ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Buzos')
         ->get();      
 
@@ -47,11 +47,11 @@ class ropaMujerController extends Controller
 
         $prendas = DB::table('ropa')
         ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
-        ->where('SEXO', '=', 'Mujer')
+        ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Otros')
         ->get();       
         }
 
-        return view('ropaMujer', compact('prendas'));
+        return view('ropaHombre', compact('prendas'));
     }
 }
