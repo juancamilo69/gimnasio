@@ -28,13 +28,13 @@
         <div>
             <form action="">
             <h2 class="titulo-filtrar">Filtrar por:</h2>
-            <select class="select-suplementos" name="seleccionarSuplemento" id="">
-            <option value="S0" selected>Seleccione suplemento</option>
-            <option value="Creatina">Creatinas</option>
-            <option value="Proteina">Proteínas</option>
-            <option value="Aminoacidos">Aminoácidos</option>
-            <option value="Boosters">Boosters</option>
-            <option value="otrosProductos">Otros</option>
+            <select class="select-suplementos" name="seleccionarRopa" id="">
+            <option value="S0" selected>Seleccione ropa</option>
+            <option value="Camisetas">Camisetas</option>
+            <option value="Esqueletos">Esqueletos</option>
+            <option value="Camisetas Oversize">Camisetas Oversize</option>
+            <option value="Buzos">Buzos</option>
+            <option value="Otros">Otros</option>
             </select>
             <button class="btn-buscar-filtro"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
@@ -44,14 +44,16 @@
         </div>
 <!-- CARD ELEMENTOS -->
 <div class="cards-suplementos-contenedor row row-cols-1 row-cols-md-3 g-4" id="cardId">
-    @foreach ($suplementos as $suplemento)
+    @foreach ($prendas as $prenda)
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100" >
-                        <img src="{{$suplemento->IMGSUPLEMENTO}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{$prenda->IMGPRENDA1}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$suplemento->NOMBRE}}</h5>
+                            <h5 class="card-title">{{$prenda->NOMBRE}}</h5>
+                            <p>{{$prenda->TIPO}}</p>
+                            <p>{{$prenda->COLOR}}</p>
                             <div class="d-flex">
-                            <P class="card-text card-text-precio mt-4"><span>Precio:</span> ${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</P>
+                            <P class="card-text card-text-precio mt-4"><span>Precio:</span> ${{ number_format($prenda->PRECIO, 0, ',', '.') }}</P>
                             <button type="button" class="btn btn-dark btn-comprar ms-auto mt-3">Detalles</button>
                             </div>
                         </div>

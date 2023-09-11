@@ -22,7 +22,7 @@ class suplementosController extends Controller
 
         $suplementos = DB::table('suplementos')
         ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
-        ->where('TIPO', '=', 'proteína')
+        ->where('TIPO', '=', 'Proteína')
         ->get();       
 
         } else if ($suplementosRequest == "Aminoacidos") {
@@ -36,14 +36,14 @@ class suplementosController extends Controller
 
         $suplementos = DB::table('suplementos')
         ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
-        ->where('TIPO', '=', 'Booster')
+        ->where('TIPO', '=', 'Boosters')
         ->get();      
 
         } else {
 
         $suplementos = DB::table('suplementos')
         ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
-        ->where('TIPO', '=', 'Relajante Muscular')
+        ->where('TIPO', '=', 'Otros')
         ->get();      
         }
 

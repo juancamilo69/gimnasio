@@ -49,13 +49,29 @@ Route::get('/maquinas', function () {
 
 // SIN AUTENTICACIÓN
 
-  Route::get('/suplementos', function () {
+Route::get('/suplementos', function () {
      return view('suplementos');
- });
+});
 
- Route::get('/suplementos', function () {
+Route::get('/suplementos', function () {
      return view('suplementos');
- })->middleware(['auth', 'verified'])->name('suplementos');
+})->middleware(['auth', 'verified'])->name('suplementos');
+
+Route::get('/sexoRopa', function () {
+    return view('sexoRopa');
+});
+
+Route::get('/sexoRopa', function () {
+    return view('sexoRopa');
+})->middleware(['auth', 'verified'])->name('sexoRopa');
+
+Route::get('/ropaMujer', function () {
+    return view('ropaMujer');
+});
+
+Route::get('/ropaMujer', function () {
+    return view('ropaMujer');
+})->middleware(['auth', 'verified'])->name('ropaMujer');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -74,6 +90,8 @@ Route::get('/maquinas', [App\Http\Controllers\maquinasController::class, 'index'
 Route::get('/elementos', [App\Http\Controllers\elementosController::class, 'index'])->name('elementos');
 
 Route::get('/suplementos', [App\Http\Controllers\suplementosController::class, 'index'])->name('suplementos');
+
+Route::get('/ropaMujer', [App\Http\Controllers\ropaMujerController::class, 'index'])->name('ropaMujer');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
