@@ -1,9 +1,5 @@
 /* General */
 
-.navigation-links a {
-    text-decoration: none;
-}
-
 .color-txt-semiblack {
     color: #212529;
 }
@@ -33,7 +29,7 @@
     font-family: "Roboto", sans-serif;
 }
 
-.select-prendas {
+.select-suplementos {
     outline: none;
     border: none;
     padding: 5px 40px 5px 10px;
@@ -64,62 +60,46 @@
     font-family: "Roboto", sans-serif;
 }
 
-/* Cards suplementos */
+/* Tabla y buscador de tabla */
 
-.card {
-    border: none;
+.titulo_input {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#buscador {
+    width: 40%;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
-.card .card-title {
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 0;
+table th {
+    font-size: 15px;
 }
 
-.card .card-text-tipo {
-    margin-bottom: 0;
-    color: #6e6e6e;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
+table td {
+    height: 80px;
+    width: 10%;
+    font-size: 15px;
 }
 
-.card .card-text-color {
-    color: #6e6e6e;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
+/* table .td-duracionmembresia,
+.td-planpareja {
+    width: 5%;
+} */
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 500px;
+    overflow: auto;
 }
 
-.card .btn-comprar {
-    border-radius: 20px;
-    font-family: "Roboto", sans-serif;
-    margin-top: 15px;
-    padding: 0px 32px;
+.table-wrapper-scroll-y {
+    display: block;
 }
 
-.card .card-text-precio {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.card img {
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.card img:hover {
-    transform: scale(0.9);
-}
-
-.img-fixed-size {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+#tablaSuplementos {
+    border-top: 2px solid #252525;
 }
 
 /* Responsive */
@@ -144,6 +124,11 @@
 
 @media screen and (max-width: 570px) {
     /* Tabla y buscador de tabla */
+
+    .btn-buscar-filtro {
+        display: block;
+        margin-top: 20px;
+    }
 
     a {
         text-decoration: none;

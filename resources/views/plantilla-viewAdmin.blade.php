@@ -57,7 +57,7 @@
                 <span class="tooltip-og">Elementos</span>
             </li>
             <li>
-                <a href="{{route ('suplementos')}}">
+                <a href="{{route ('suplementosAdmin')}}">
                     <i class="fa-solid fa-jar"></i>
                     <span class="nav-item-span">Suplementos</span>
                 </a>
