@@ -10,16 +10,16 @@
     <h5>Registro de suplementos</h5>
 </Section>
 
-<div>
+        <div>
             <form action="">
             <h2 class="titulo-filtrar">Filtrar por:</h2>
-            <select class="select-suplementos" name="seleccionarSuplemento" id="">
-            <option value="S0" selected>Seleccione suplemento</option>
-            <option value="Creatina">Creatinas</option>
-            <option value="Proteina">Proteínas</option>
-            <option value="Aminoacidos">Aminoácidos</option>
-            <option value="Boosters">Boosters</option>
-            <option value="otrosProductos">Otros</option>
+            <select class="select-prendas" name="seleccionarRopa" id="">
+            <option value="S0" selected>Seleccione ropa</option>
+            <option value="Camisetas">Camisetas</option>
+            <option value="Esqueletos">Esqueletos</option>
+            <option value="Camisetas Oversize">Camisetas Oversize</option>
+            <option value="Buzos">Buzos</option>
+            <option value="Otros">Otros</option>
             </select>
             <button class="btn-buscar-filtro"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
@@ -33,32 +33,40 @@
                                         <thead class="encabezado-tabla align-middle">
                                             <tr>
                                             <th>Nombre</th>
-                                            <th>Marca</th>
                                             <th>Tipo</th>
                                             <th>Descripción</th>
                                             <th>Stock</th>
                                             <th>Precio</th>
-                                            <th>Imágen portada</th>
-                                            <th>Imágen tabla nutricional</th>
+                                            <th>Talla</th>
+                                            <th>Color</th>
+                                            <th>Sexo</th>
+                                            <th>Material</th>
+                                            <th>IMGPRENDA1</th>
+                                            <th>IMGPRENDA2</th>
+                                            <th>IMGPRENDA3</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="tablaSuplementos"> 
-                                            @foreach($suplementos as $suplemento)
+                                        <tbody id="tablaRopa"> 
+                                            @foreach($prendas as $prenda)
                                             <tr>
-                                                <td>{{ $suplemento->NOMBRE }}</td>
-                                                <td>{{ $suplemento->MARCA }}</td>
-                                                <td>{{ $suplemento->TIPO }}</td>
-                                                <td>{{ $suplemento->DESCRIPCION }}</td>
-                                                <td>{{ $suplemento->STOCK }}</td>
-                                                <td>${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</td>
-                                                <td>{{ $suplemento->IMGSUPLEMENTO }}</td>
-                                                <td>{{ $suplemento->IMGTABLANUTRICIONAL }}</td> 
+                                                <td>{{ $prenda->NOMBRE }}</td> 
+                                                <td>{{ $prenda->TIPO }}</td>
+                                                <td>{{ $prenda->DESCRIPCION }}</td>
+                                                <td>{{ $prenda->STOCK }}</td>
+                                                <td>${{ number_format($prenda->PRECIO, 0, ',', '.') }}</td>
+                                                <td>{{ $prenda->TALLA }}</td>
+                                                <td>{{ $prenda->COLOR }}</td>
+                                                <td>{{ $prenda->SEXO }}</td>
+                                                <td>{{ $prenda->MATERIAL }}</td>
+                                                <td>{{ $prenda->IMGPRENDA1 }}</td>
+                                                <td>{{ $prenda->IMGPRENDA2 }}</td>
+                                                <td>{{ $prenda->IMGPRENDA3 }}</td>
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){
                                                   $("#buscador").on("keyup", function() {
                                                     var value = $(this).val().toLowerCase();
-                                                    $("#tablaSuplementos tr").filter(function() {
+                                                    $("#tablaRopa tr").filter(function() {
                                                       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                                                     });
                                                   });

@@ -64,7 +64,7 @@
                 <span class="tooltip-og">Suplementos</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{route ('ropaAdmin')}}">
                     <i class="fa-solid fa-shirt"></i>
                     <span class="nav-item-span">Ropa</span>
                 </a>

@@ -109,6 +109,8 @@ Route::get('/ropaHombre', [App\Http\Controllers\ropaHombreController::class, 'in
 
 Route::get('/suplementosAdmin', [App\Http\Controllers\suplementosAdminController::class, 'index'])->name('suplementosAdmin');
 
+Route::get('/ropaAdmin', [App\Http\Controllers\ropaAdminController::class, 'index'])->name('ropaAdmin');
+
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
     return view('welcome', ['membresiasData' => $membresiasData]);
