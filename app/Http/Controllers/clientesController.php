@@ -36,4 +36,9 @@ class clientesController extends Controller
         //return $tipomembresia;
         return view('views-admin/clientes', compact('usuarios'));
     }
+
+    public function create() {
+        $usuarios = users::all();
+        return view('crearCliente', compact('usuarios'));
+    }
 }

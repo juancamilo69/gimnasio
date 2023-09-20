@@ -45,6 +45,7 @@
                                             <th>PLAN PAREJA</th>
                                             <th>Fecha inicio</th>
                                             <th>Fecha final</th>
+                                            <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tablaClientes"> 
@@ -65,7 +66,8 @@
                                                 <td class="td-duracionmembresia">{{ $usuario->DURACIONMESES }}</td>
                                                 <td class="td-planpareja">{{ $usuario->PLANPAREJA }}</td>
                                                 <td>{{ $usuario->FECHAMEMBRESIAINICIO }}</td>
-                                                <td>{{ $usuario->FECHAMEMBRESIAFINAL }}</td> 
+                                                <td>{{ $usuario->FECHAMEMBRESIAFINAL }}</td>
+                                                <td class="td-acciones"><a href="{{route ('crearCliente')}}"><button><i class="fa-solid fa-user-plus"></i></button></a> <button><i class="fa-solid fa-user-pen"></i></button> <button><i class="fa-solid fa-user-minus"></i></button></td>
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){

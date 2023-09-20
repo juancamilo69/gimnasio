@@ -45,7 +45,6 @@ table th {
 
 table td {
     height: 80px;
-    width: 10%;
     font-size: 15px;
 }
 
@@ -66,6 +65,15 @@ table td {
 
 #tablaClientes {
     border-top: 2px solid #252525;
+}
+
+
+.td-acciones button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8ddc97;
 }
 
 /* Responsive */

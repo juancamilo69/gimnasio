@@ -85,6 +85,10 @@ Route::get('/suplementosAdmin', function () {
     return view('views-admin/suplementosAdmin');
 })->middleware(['auth', 'verified'])->name('suplementosAdmin');
 
+Route::get('/crearCliente', function () {
+    return view('views-admin/crearCliente');
+})->middleware(['auth', 'verified'])->name('crearCliente');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
