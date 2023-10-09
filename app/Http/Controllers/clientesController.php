@@ -41,4 +41,6 @@ class clientesController extends Controller
         $usuarios = users::all();
         return view('crearCliente', compact('usuarios'));
     }
+
+    
 }
