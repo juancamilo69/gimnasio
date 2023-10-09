@@ -115,6 +115,8 @@ Route::get('/suplementosAdmin', [App\Http\Controllers\suplementosAdminController
 
 Route::get('/ropaAdmin', [App\Http\Controllers\ropaAdminController::class, 'index'])->name('ropaAdmin');
 
+Route::post('/crearCliente', [App\Http\Controllers\clientesController::class, 'store'])->name('crearCliente.store');
+
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
     return view('welcome', ['membresiasData' => $membresiasData]);

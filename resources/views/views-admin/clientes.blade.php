@@ -22,6 +22,9 @@
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
+                <div class="btn-crear-cliente">
+                    <a href="{{route ('crearCliente')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
+                </div>
             </div>
         </div>
 
@@ -67,7 +70,7 @@
                                                 <td class="td-planpareja">{{ $usuario->PLANPAREJA }}</td>
                                                 <td>{{ $usuario->FECHAMEMBRESIAINICIO }}</td>
                                                 <td>{{ $usuario->FECHAMEMBRESIAFINAL }}</td>
-                                                <td class="td-acciones"><a href="{{route ('crearCliente')}}"><button><i class="fa-solid fa-user-plus"></i></button></a> <button><i class="fa-solid fa-user-pen"></i></button> <button><i class="fa-solid fa-user-minus"></i></button></td>
+                                                <td class="td-acciones"><button><i class="fa-solid fa-user-pen"></i></button> <button><i class="fa-solid fa-user-minus"></i></button></td>
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){
