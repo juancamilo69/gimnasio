@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\users;
 use App\Models\sedes;
 use App\Models\tipomembresias;
+use App\Models\membresias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use DB;
@@ -38,7 +39,30 @@ class clientesController extends Controller
     }
 
     public function create() {
+        $crearMembresia = membresias::all();
         $usuarios = users::all();
-        return view('crearCliente', compact('usuarios'));
+        return view('crearCliente', compact('crearMembresia', 'usuarios'));
+    }
+    
+    public function store(Request $request) {
+        
+        membresias::create([
+            'IDTIPOSMEMBRESIAS' => request('membresia'),
+            'FECHAMEMBRESIAINICIO' => request('fechaInicio'),
+            'FECHAMEMBRESIAFINAL' => request('fechaFin'),
+            'MONTOPAGO' => request('precioMembresia')
+       ]); 
+
+       users::create([
+            'name' => request('nombre'),
+            'email' => request('correo'),
+       ]); 
+
+       sedes::create([
+            'CIUDAD' => request('ciudad'),
+            'DIRECCION' => request('direccion'),
+       ]); 
+
+       return redirect()->route('clientes');
     }
 }
