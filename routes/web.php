@@ -128,7 +128,13 @@ Route::post('/crearCliente', [App\Http\Controllers\clientesController::class, 's
 
 Route::post('/crearRopa', [App\Http\Controllers\ropaController::class, 'store'])->name('crearRopa.store');
 
+Route::get('/{prendas}/eliminar', [App\Http\Controllers\ropaAdminController::class, 'destroy'])->name('eliminarRopa.destroy');
+
 Route::post('/crearSuplementos', [App\Http\Controllers\suplementosController::class, 'store'])->name('crearSuplementos.store');
+
+// Route::get('/{suplementos}/eliminar', [App\Http\Controllers\suplementosAdminController::class, 'destroy'])->name('eliminarSuplementos.destroy');
+
+Route::get('/eliminars/{id}', [App\Http\Controllers\suplementosAdminController::class, 'destroy'])->name('suplementos.destroy');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();

@@ -10,6 +10,6 @@ class suplementos extends Model
     use HasFactory;
 
     protected $table = 'suplementos';
+    protected $fillable = ['IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL'];
     protected $primaryKey = 'IDSUPLEMENTO';
-    protected $fillable = ['NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL'];
 }

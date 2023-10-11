@@ -14,39 +14,46 @@ class suplementosAdminController extends Controller
         if($suplementosRequest == "Creatina" || $suplementosRequest == null) {
 
         $suplementos = DB::table('suplementos')
-        ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
+        ->select('IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
         ->where('TIPO', '=', 'creatina')
         ->get();     
 
         } else if ($suplementosRequest == "Proteina") {
 
         $suplementos = DB::table('suplementos')
-        ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
+        ->select('IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
         ->where('TIPO', '=', 'Proteína')
         ->get();       
 
         } else if ($suplementosRequest == "Aminoacidos") {
 
         $suplementos = DB::table('suplementos')
-        ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
+        ->select('IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
         ->where('TIPO', '=', 'Aminoácidos')
         ->get();      
 
         } else if ($suplementosRequest == "Boosters") {
 
         $suplementos = DB::table('suplementos')
-        ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
+        ->select('IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
         ->where('TIPO', '=', 'Boosters')
         ->get();      
 
         } else {
 
         $suplementos = DB::table('suplementos')
-        ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
+        ->select('IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
         ->where('TIPO', '=', 'Otros')
         ->get();      
         }
 
         return view('views-admin/suplementosAdmin', compact('suplementos'));
+    }
+
+    public function destroy(String $IDSUPLEMENTO) {
+        $suplementos = suplementos::findOrfail($IDSUPLEMENTO);
+        $suplementos -> delete();
+
+        return redirect()->route('suplementosAdmin'); 
     }
 }
