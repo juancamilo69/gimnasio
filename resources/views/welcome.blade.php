@@ -141,7 +141,7 @@
             <div class="cards-servicios-contenedor row row-cols-1 row-cols-md-3 g-4">
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/servicios/Asesoria.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Asesorías</p>
                         </div>
@@ -150,7 +150,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/servicios/Entrenamiento semi-personalizado.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Entrenamiento semi-personalizado</p>
                         </div>
@@ -159,7 +159,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/servicios/Suplementación.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Suplementación</p>
                         </div>
@@ -168,7 +168,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/servicios/Clases grupales.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Clases grupales</p>
                         </div>
@@ -177,7 +177,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/servicios/Valoración física.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Valoración física</p>
                         </div>
@@ -186,7 +186,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/servicios/Eventos y actividades sociales.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Eventos y actividades sociales</p>
                         </div>
@@ -202,7 +202,7 @@
     <div class="cards-servicios-contenedor row row-cols-1 row-cols-md-3 g-4">
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/zonas especializadas/zonaMuscular.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Zona musculación</p>
                         </div>
@@ -211,7 +211,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/zonas especializadas/zonaCardio.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Zona Cardio</p>
                         </div>
@@ -220,7 +220,7 @@
 
                     <div class="col col-sm-6">
                         <div class="card h-100 w-100">
-                        <img src="{{asset('images/banner/banner1.jpg')}}" class="card-img-top img-fixed-size" alt="...">
+                        <img src="{{asset('images/zonas especializadas/salonesGrupales.jpg')}}" class="card-img-top img-fixed-size" alt="...">
                         <div class="card-body">
                             <p>Salones grupales</p>
                         </div>
