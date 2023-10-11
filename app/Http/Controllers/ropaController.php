@@ -49,4 +49,25 @@ class ropaController extends Controller
 
         return view('ropaMujer', compact('prendas'));
     }
+
+    public function store(Request $request) {
+
+        ropa::create([
+            'NOMBRE' => request('nombre'),
+            'TIPO' => request('tipo'),
+            'DESCRIPCION' => request('descripcion'),
+            'STOCK' => request('stock'),
+            'PRECIO' => request('precio'),
+            'TALLA' => request('talla'),
+            'COLOR' => request('color'),
+            'SEXO' => request('sexo'),
+            'MATERIAL' => request('material'),
+            'IMGPRENDA1' => request('imagen1'),
+            'IMGPRENDA2' => request('imagen2'),
+            'IMGPRENDA3' => request('imagen3')
+        ]);
+
+        return redirect()->route('ropaAdmin');
+    }
+
 }

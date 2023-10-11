@@ -49,4 +49,20 @@ class suplementosController extends Controller
 
         return view('suplementos', compact('suplementos'));
     }
+
+    public function store(Request $request) {
+
+        suplementos::create([
+            'NOMBRE' => request('nombre'),
+            'MARCA' => request('marca'),
+            'TIPO' => request('tipo'),
+            'DESCRIPCION' => request('descripcion'),
+            'STOCK' => request('stock'),
+            'PRECIO' => request('precio'),
+            'IMGSUPLEMENTO' => request('imgSuplemento'),
+            'IMGTABLANUTRICIONAL' => request('imgTablaNutricion')
+        ]);
+
+        return redirect()->route('suplementosAdmin');
+    }
 }

@@ -64,6 +64,24 @@
     font-family: "Roboto", sans-serif;
 }
 
+.titulo_input .btn-crear-cliente a button {
+    margin-top: 22px;
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8ddc97;
+}
+
+.td-acciones button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8ddc97;
+}
+
 /* Cards suplementos */
 
 .card {

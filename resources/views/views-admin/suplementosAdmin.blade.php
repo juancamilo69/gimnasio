@@ -25,7 +25,11 @@
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
+                <div class="btn-crear-cliente">
+                    <a href="{{route ('crearSuplementos')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
+                </div>
             </div>
+            
         </div>
 
     <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
@@ -40,6 +44,7 @@
                                             <th>Precio</th>
                                             <th>Imágen portada</th>
                                             <th>Imágen tabla nutricional</th>
+                                            <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tablaSuplementos"> 
@@ -53,6 +58,7 @@
                                                 <td>${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</td>
                                                 <td>{{ $suplemento->IMGSUPLEMENTO }}</td>
                                                 <td>{{ $suplemento->IMGTABLANUTRICIONAL }}</td> 
+                                                <td class="td-acciones"><button><i class="fa-solid fa-user-pen"></i></button> <button><i class="fa-solid fa-user-minus"></i></button></td>
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){

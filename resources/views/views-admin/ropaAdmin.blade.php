@@ -1,13 +1,13 @@
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')
-<link rel="stylesheet" href="{{ asset('css/suplementosAdmin.css') }}">
+<link rel="stylesheet" href="{{ asset('css/ropaAdmin.css') }}">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <!-- Hero Section -->
 <Section class="hero">
-    <h1>Suplementos</h1>
-    <h5>Registro de suplementos</h5>
+    <h1>Ropa</h1>
+    <h5>Registro de Prendas</h5>
 </Section>
 
         <div>
@@ -25,6 +25,9 @@
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
+                <div class="btn-crear-cliente">
+                    <a href="{{route ('crearRopa')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
+                </div>
             </div>
         </div>
 
@@ -44,6 +47,7 @@
                                             <th>IMGPRENDA1</th>
                                             <th>IMGPRENDA2</th>
                                             <th>IMGPRENDA3</th>
+                                            <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tablaRopa"> 
@@ -61,6 +65,7 @@
                                                 <td>{{ $prenda->IMGPRENDA1 }}</td>
                                                 <td>{{ $prenda->IMGPRENDA2 }}</td>
                                                 <td>{{ $prenda->IMGPRENDA3 }}</td>
+                                                <td class="td-acciones"><button><i class="fa-solid fa-user-pen"></i></button> <button><i class="fa-solid fa-user-minus"></i></button></td>                                                
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){

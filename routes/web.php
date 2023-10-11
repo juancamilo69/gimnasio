@@ -89,6 +89,15 @@ Route::get('/crearCliente', function () {
     return view('views-admin/crearCliente');
 })->middleware(['auth', 'verified'])->name('crearCliente');
 
+Route::get('/crearRopa', function () {
+    return view('views-admin/crearRopa');
+})->middleware(['auth', 'verified'])->name('crearRopa');
+
+Route::get('/crearSuplementos', function () {
+    return view('views-admin/crearSuplementos');
+})->middleware(['auth', 'verified'])->name('crearSuplementos');
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -116,6 +125,10 @@ Route::get('/suplementosAdmin', [App\Http\Controllers\suplementosAdminController
 Route::get('/ropaAdmin', [App\Http\Controllers\ropaAdminController::class, 'index'])->name('ropaAdmin');
 
 Route::post('/crearCliente', [App\Http\Controllers\clientesController::class, 'store'])->name('crearCliente.store');
+
+Route::post('/crearRopa', [App\Http\Controllers\ropaController::class, 'store'])->name('crearRopa.store');
+
+Route::post('/crearSuplementos', [App\Http\Controllers\suplementosController::class, 'store'])->name('crearSuplementos.store');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
