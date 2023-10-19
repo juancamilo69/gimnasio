@@ -48,7 +48,12 @@
                         <h5 class="cardm-title">{{$membresiasDatas->NOMBREMEMBRESIA}}</h5>
                         <p class="cardm-text">{{$membresiasDatas->DESCRIPCION}}</p>
                         <h2 class="cardm-precio">$ {{$membresiasDatas->PRECIO}} <span>/ Mes</span></h2>
-                        <p class="cardm-checktext"><i class="fa-solid fa-circle-check"></i> <span>Válido por 1 mes</span></p>
+                        <p class="cardm-checktext"><i class="fa-solid fa-circle-check"></i> <span>Válido por {{$membresiasDatas->DURACIONMESES}} @if($membresiasDatas->DURACIONMESES > 1)
+                                                          meses
+                                                      @else
+                                                          mes
+                                                      @endif
+                                                    </span></p>
                         <button class="cardm-btn">Adquirir</button>
                     </div>
                     </div>
