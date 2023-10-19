@@ -37,18 +37,19 @@
             <h2>Planes</h2>
             </section>
 
-    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+    <div class="overflow-hidden mb-5">
         <div class="p-6 text-gray-900">
             <div class="cards-membresias-contenedor row row-cols-1 row-cols-md-3 g-4">            
                 <!-- CARD MEMBRESÍAS -->
                 @foreach ($membresiasData as $membresiasDatas)
                 <div class="col">
-                    <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">{{$membresiasDatas->NOMBREMEMBRESIA}}</h5>
-                        <h2>{{$membresiasDatas->PRECIO}}</h2>
-                        <p class="card-text">{{$membresiasDatas->DESCRIPCION}}</p>
-                        <button type="button" class="btns">Adquirir</button>
+                    <div class="cardm h-100">
+                    <div class="cardm-body">
+                        <h5 class="cardm-title">{{$membresiasDatas->NOMBREMEMBRESIA}}</h5>
+                        <p class="cardm-text">{{$membresiasDatas->DESCRIPCION}}</p>
+                        <h2 class="cardm-precio">$ {{$membresiasDatas->PRECIO}} <span>/ Mes</span></h2>
+                        <p class="cardm-checktext"><i class="fa-solid fa-circle-check"></i> <span>Válido por 1 mes</span></p>
+                        <button class="cardm-btn">Adquirir</button>
                     </div>
                     </div>
                 </div>

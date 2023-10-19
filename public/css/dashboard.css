@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 .hero-section img {
     filter: brightness(80%);
 }
@@ -54,6 +55,46 @@
     }
 }
 
+/* Cards membresías */
+
+.cardm {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 50px 35px 50px 35px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
+}
+
+.cardm-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cardm-text {
+    font-weight: 400;
+    color: #727a69;
+}
+
+.cardm-precio {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+}
+
+.cardm-precio span {
+    color: #727a69;
+    font-size: 15px;
+}
+
+.cardm-btn {
+    background-color: #2a324b;
+    color: #fff;
+    height: 40px;
+    width: 90%;
+    display: block;
+    margin: 80px auto 0 auto;
+    border-radius: 20px;
+}
+
 .texto-bienvenido {
     margin-top: 80px;
     text-align: center;
@@ -64,6 +105,7 @@
 
 .contenedor-titulos-cards {
     margin-top: 80px;
+    text-align: center;
 }
 
 .contenedor-titulos-cards h3 {
@@ -79,39 +121,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.cards-membresias-contenedor .card {
-    text-align: left;
-    font-family: "Roboto", sans-serif;
-}
-
-.cards-membresias-contenedor .card h5 {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.cards-membresias-contenedor .card h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-.cards-membresias-contenedor .card p {
-    margin-bottom: 10px;
-}
-
-.cards-membresias-contenedor .card .btns {
-    width: 100%;
-    color: #f1f1f1;
-    background-color: #252525;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.membresias-card {
-    margin-bottom: 80px;
-}
-
 /* .section-imperio */
-
 .section-imperio {
     background-color: #e3e3e3;
     height: 300px;
@@ -155,7 +165,6 @@
 }
 
 /* .section-imperio 2 */
-
 .section-imperio2 {
     background-color: #727a69;
     height: 300px;
@@ -200,7 +209,6 @@
 }
 
 /* Section Servicios */
-
 .contenedor-introduccion-servicios {
     margin-top: 60px;
 }
@@ -219,17 +227,15 @@
 }
 
 /* Cards Servicios */
-
 .cards-servicios-contenedor .card {
     box-shadow: 0 3px 17px rgba(0, 0, 0, 0.1);
 }
 
-.cards-servicios-contenedor .card img { 
+.cards-servicios-contenedor .card img {
     object-fit: cover;
     width: 100%;
     height: 200px;
 }
-
 
 .cards-servicios-contenedor .card-body p {
     font-size: 15px;
@@ -238,7 +244,6 @@
 }
 
 /* Zonas especializadas */
-
 .zonas-especializadas {
     margin-top: 50px;
     text-align: center;
@@ -252,61 +257,51 @@
 }
 
 /* footer */
-
 footer i {
     color: #fff;
 }
 
 /* Responsive */
-
 @media screen and (max-width: 1024px) {
     .section-imperio {
         height: 400px;
     }
-
     .section-imperio2 {
         height: 400px;
     }
-
     .col-numero {
         display: none;
     }
-
     .col-numero2 {
         display: none;
     }
 }
-
 @media screen and (max-width: 767px) {
     .img-ajustable1 {
         content: url(../images/banner/banner1-responsive.jpg);
     }
 }
-
 @media screen and (max-width: 500px) {
     .contenido-imperio h3 {
         font-size: 35px;
     }
-
     .contenido-imperio2 h3 {
         font-size: 35px;
     }
 }
-
 @media screen and (max-width: 400px) {
     .section-imperio {
         height: 500px;
     }
-
     .section-imperio2 {
         height: 500px;
     }
-
     .contenido-imperio h3 {
         font-size: 25px;
     }
-
     .contenido-imperio2 h3 {
         font-size: 25px;
     }
 }
+
+/*# sourceMappingURL=dashboard.css.map */
