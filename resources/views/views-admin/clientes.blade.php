@@ -23,7 +23,8 @@
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
                 <div class="btn-crear-cliente">
-                    <a href="{{route ('crearCliente')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
+                    <a href="{{route ('crearClienteForm')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
+                    <a href="{{route ('crearMembresiaForm')}}"><button><i class="fa-solid fa-address-card"></i></button></a>
                 </div>
             </div>
         </div>

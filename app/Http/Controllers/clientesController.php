@@ -38,33 +38,71 @@ class clientesController extends Controller
         return view('views-admin/clientes', compact('usuarios'));
     }
 
-    public function create() {
-        $crearMembresia = membresias::all();
-        $usuarios = users::all();
-        return view('crearCliente', compact('crearMembresia', 'usuarios'));
-    }
-    
-    public function store(Request $request) {
-        
-        membresias::create([
-            'IDTIPOSMEMBRESIAS' => request('membresia'),
-            'FECHAMEMBRESIAINICIO' => request('fechaInicio'),
-            'FECHAMEMBRESIAFINAL' => request('fechaFin'),
-            'MONTOPAGO' => request('precioMembresia')
-       ]); 
+    // CREAR CLIENTE
 
-       users::create([
-            'name' => request('nombre'),
-            'email' => request('correo'),
-       ]); 
-
-       sedes::create([
-            'CIUDAD' => request('ciudad'),
-            'DIRECCION' => request('direccion'),
-       ]); 
-
-       return redirect()->route('clientes');
+    public function crearClienteForm()
+    {
+        return view('views-admin/crearCliente'); // Nombre de la vista del formulario de creación
     }
 
-    
+    // Método para guardar al cliente en la base de datos
+    public function guardarCliente(Request $request)
+    {
+        // Valida los datos del formulario
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'IDSEDE' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+            // Agrega más reglas de validación según tus necesidades
+        ]);
+
+        // Crea un nuevo cliente en la base de datos
+        $cliente = users::create([
+            'name' => $validatedData['name'],
+            'IDSEDE' => $validatedData['IDSEDE'],
+            'email' => $validatedData['email'],
+            'password' => bcrypt($validatedData['password']), // Asegúrate de hashear la contraseña
+            // Agrega más campos según tu base de datos
+        ]);
+
+        // Redirige a la vista de clientes o a donde desees
+        return redirect()->route('clientes'); // Reemplaza 'clientes' con la ruta correcta
+    }
+
+    // ASIGNAR MEMBRESIAS
+
+    public function crearMembresiaForm()
+    {
+        return view('views-admin/crearMembresia'); // Nombre de la vista del formulario de creación
+    }
+
+    // Método para guardar al cliente en la base de datos
+    public function guardarMembresia(Request $request)
+    {
+        // Valida los datos del formulario
+        $validatedData = $request->validate([
+            'id' => 'required',
+            'id2' => 'nullable',
+            'IDTIPOSMEMBRESIAS' => 'required',
+            'FECHAMEMBRESIAINICIO' => 'required',
+            'FECHAMEMBRESIAFINAL' => 'required',
+            'MONTOPAGO' => 'required',
+            // Agrega más reglas de validación según tus necesidades
+        ]);
+
+        // Crea un nuevo cliente en la base de datos
+        $membresia = membresias::create([
+            'id' => $validatedData['id'],
+            'id2' => $validatedData['id2'],
+            'IDTIPOSMEMBRESIAS' => $validatedData['IDTIPOSMEMBRESIAS'],
+            'FECHAMEMBRESIAINICIO' => $validatedData['FECHAMEMBRESIAINICIO'],
+            'FECHAMEMBRESIAFINAL' => $validatedData['FECHAMEMBRESIAFINAL'],
+            'MONTOPAGO' => $validatedData['MONTOPAGO'],
+            // Agrega más campos según tu base de datos
+        ]);
+
+        // Redirige a la vista de clientes o a donde desees
+        return redirect()->route('clientes'); // Reemplaza 'clientes' con la ruta correcta
+    }
 }

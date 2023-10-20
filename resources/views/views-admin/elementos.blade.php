@@ -25,6 +25,9 @@
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
+                <div class="btn-crear-elemento">
+                    <a href="{{route ('crearElementoForm')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
+                </div>
             </div>
         </div>
 <!-- CARD ELEMENTOS -->

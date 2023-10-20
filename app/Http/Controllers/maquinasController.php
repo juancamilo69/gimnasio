@@ -39,4 +39,41 @@ class maquinasController extends Controller
 
         return view('views-admin/maquinas', compact('maquinas'));
     }
+
+    // CREAR MÁQUINA
+
+    public function crearMaquinaForm()
+    {
+        return view('views-admin/crearMaquina'); // Nombre de la vista del formulario de creación
+    }
+
+    // Método para guardar al cliente en la base de datos
+    public function guardarMaquina(Request $request)
+    {
+        // Valida los datos del formulario
+        $validatedData = $request->validate([
+            'IDSEDE' => 'required',
+            'NOMBREMAQUINA' => 'required',
+            'GRUPOMUSCULAR' => 'required',
+            'FECHACOMPRA' => 'required',
+            'IMGMAQUINA' => 'required',
+            'SOPORTE' => 'required',
+            // Agrega más reglas de validación según tus necesidades
+        ]);
+
+        // Crea un nuevo cliente en la base de datos
+        $maquinas = maquinas::create([
+            'IDSEDE' => $validatedData['IDSEDE'],
+            'NOMBREMAQUINA' => $validatedData['NOMBREMAQUINA'],
+            'GRUPOMUSCULAR' => $validatedData['GRUPOMUSCULAR'],
+            'FECHACOMPRA' => $validatedData['FECHACOMPRA'],
+            'IMGMAQUINA' => $validatedData['IMGMAQUINA'],
+            'SOPORTE' => $validatedData['SOPORTE'],
+            // Agrega más campos según tu base de datos
+        ]);
+
+        // Redirige a la vista de clientes o a donde desees
+        return redirect()->route('maquinas'); // Reemplaza 'clientes' con la ruta correcta
+    }
+
 }

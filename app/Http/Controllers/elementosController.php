@@ -37,4 +37,42 @@ class elementosController extends Controller
 
         return view('views-admin/elementos', compact('elementos'));
     }     
+
+    // CREAR ELEMENTO
+
+    public function crearElementoForm()
+    {
+        return view('views-admin/crearElemento'); // Nombre de la vista del formulario de creación
+    }
+
+    // Método para guardar al cliente en la base de datos
+    public function guardarElemento(Request $request)
+    {
+        // Valida los datos del formulario
+        $validatedData = $request->validate([
+            'IDSEDE' => 'required',
+            'NOMBRE' => 'required',
+            'TIPO' => 'required',
+            'USO' => 'required',
+            'FECHACOMPRA' => 'required',
+            'IMGELEMENTO' => 'required',
+            'SOPORTE' => 'required',
+            // Agrega más reglas de validación según tus necesidades
+        ]);
+
+        // Crea un nuevo cliente en la base de datos
+        $elementos = elementos::create([
+            'IDSEDE' => $validatedData['IDSEDE'],
+            'NOMBRE' => $validatedData['NOMBRE'],
+            'TIPO' => $validatedData['TIPO'],
+            'USO' => $validatedData['USO'],
+            'FECHACOMPRA' => $validatedData['FECHACOMPRA'],
+            'IMGELEMENTO' => $validatedData['IMGELEMENTO'],
+            'SOPORTE' => $validatedData['SOPORTE'],
+            // Agrega más campos según tu base de datos
+        ]);
+
+        // Redirige a la vista de clientes o a donde desees
+        return redirect()->route('elementos'); // Reemplaza 'clientes' con la ruta correcta
+    }
 }

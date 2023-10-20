@@ -110,9 +110,55 @@ Route::get('/dashboard', [App\Http\Controllers\infoMembresiasController::class, 
 
 Route::get('/clientes', [App\Http\Controllers\clientesController::class, 'index'])->name('clientes');
 
+// Crear usuarios
+
+// Ruta para mostrar el formulario de creación
+Route::get('/crear-cliente', 'App\Http\Controllers\clientesController@crearClienteForm')->name('crearClienteForm');
+
+// validacion CSRF
+Route::post('/guardar-cliente', 'clientesController@guardarCliente')->name('guardarCliente')->middleware('web');
+
+// Ruta para procesar el formulario de creación
+Route::post('/guardar-cliente', 'App\Http\Controllers\clientesController@guardarCliente')->name('guardarCliente');
+
+// Asignar membresía a usuarios
+
+// Ruta para mostrar el formulario de creación
+Route::get('/crear-membresia', 'App\Http\Controllers\clientesController@crearMembresiaForm')->name('crearMembresiaForm');
+
+// validacion CSRF
+Route::post('/guardar-membresia', 'clientesController@guardarMembresia')->name('guardarMembresia')->middleware('web');
+
+// Ruta para procesar el formulario de creación
+Route::post('/guardar-membresia', 'App\Http\Controllers\clientesController@guardarMembresia')->name('guardarMembresia');
+
 Route::get('/maquinas', [App\Http\Controllers\maquinasController::class, 'index'])->name('maquinas');
 
+// Crear máquinas
+
+// Ruta para mostrar el formulario de creación
+Route::get('/crear-maquina', 'App\Http\Controllers\maquinasController@crearMaquinaForm')->name('crearMaquinaForm');
+
+// validacion CSRF
+Route::post('/guardar-maquina', 'maquinasController@guardarMaquina')->name('guardarMaquina')->middleware('web');
+
+// Ruta para procesar el formulario de creación
+Route::post('/guardar-Maquina', 'App\Http\Controllers\maquinasController@guardarMaquina')->name('guardarMaquina');
+
+// Elementos
+
 Route::get('/elementos', [App\Http\Controllers\elementosController::class, 'index'])->name('elementos');
+
+// Crear Elementos
+
+// Ruta para mostrar el formulario de creación
+Route::get('/crear-elemento', 'App\Http\Controllers\elementosController@crearElementoForm')->name('crearElementoForm');
+
+// validacion CSRF
+Route::post('/guardar-elemento', 'elementosController@guardarElemento')->name('guardarElemento')->middleware('web');
+
+// Ruta para procesar el formulario de creación
+Route::post('/guardar-elemento', 'App\Http\Controllers\elementosController@guardarElemento')->name('guardarElemento');
 
 Route::get('/suplementos', [App\Http\Controllers\suplementosController::class, 'index'])->name('suplementos');
 
@@ -123,8 +169,6 @@ Route::get('/ropaHombre', [App\Http\Controllers\ropaHombreController::class, 'in
 Route::get('/suplementosAdmin', [App\Http\Controllers\suplementosAdminController::class, 'index'])->name('suplementosAdmin');
 
 Route::get('/ropaAdmin', [App\Http\Controllers\ropaAdminController::class, 'index'])->name('ropaAdmin');
-
-Route::post('/crearCliente', [App\Http\Controllers\clientesController::class, 'store'])->name('crearCliente.store');
 
 Route::post('/crearRopa', [App\Http\Controllers\ropaController::class, 'store'])->name('crearRopa.store');
 

@@ -39,6 +39,16 @@
     margin-top: 20px;
 }
 
+.titulo_input .btn-crear-maquina button {
+    margin-top: 22px;
+    margin-left: 10px;
+    width: 50px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8ddc97;
+}
+
 /* Cards máquinass */
 
 .card {
