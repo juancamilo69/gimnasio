@@ -6,27 +6,27 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block w-auto fill-current " />
+                        <img src="https://static.wixstatic.com/media/a616b7_216e47d806ca44868876ac97fd3bbbf5~mv2.jpeg/v1/fill/w_161,h_37,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a616b7_216e47d806ca44868876ac97fd3bbbf5~mv2.jpeg" width="150px" alt="">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="navigation-links hidden space-x-8 sm:-my-px sm:ml-10 sm:flex" style="font-family: 'Montserrat', sans-serif;">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('INICIO') }}
+                        {{ __('Inicio') }}
                     </x-nav-link>
                     <x-nav-link :href="route('sedes')" :active="request()->routeIs('sedes')">
-                        {{ __('SEDES') }}
+                        {{ __('Sedes') }}
                     </x-nav-link>
                     <x-nav-link :href="route('suplementos')" :active="request()->routeIs('suplementos')">
-                        {{ __('SUPLEMENTOS') }}
+                        {{ __('Suplementos') }}
                     </x-nav-link>
                     <x-nav-link :href="route('sexoRopa')" :active="request()->routeIs('sexoRopa')">
-                        {{ __('ROPA') }}
+                        {{ __('Ropa') }}
                     </x-nav-link>
                     @role('administrador')
                     <x-nav-link :href="route('viewAdmin')" :active="request()->routeIs('viewAdmin')">
-                        {{ __('ADMIN') }}
+                        {{ __('Admin') }}
                     </x-nav-link>
                     @endrole
                 </div>

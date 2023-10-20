@@ -64,39 +64,35 @@
         </div>
     </div>
 
-    <!-- Enunciado el imperio de la disciplina -->
-    <section class="section-imperio">
-        <div class="contenido-imperio container">
-            <div class="row">
-                <div class="col-numero col-12 col-sm-12 col-md-12 col-lg-3">
-                    <h2>01</h2>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
-                <h3>El imperio de la <span>disciplina</span></h3>
-                <p>¡Bienvenidos al sitio web de Reich Gym!
-                    En Reich Gym, nuestra misión es ayudarte a alcanzar tus metas de acondicionamiento 
-                    físico y salud. Nuestro equipo de entrenadores altamente capacitados está comprometido
-                    para brindarte la mejor experiencia posible y así puedas alcanzar tus objetivos de forma 
-                    segura y eficiente.</p>
-                </div>
-                <!-- <div class="col col-lg-3">
-                    <img src="{{ asset('images/recursos-pagina/personas-ejercicio.svg') }}" alt="Ejercicio gym" class="img-imperio img-responsive">
-                </div> -->
-            </div>
-        </div>
-    </section>
+    <!-- Section Sedes -->
+    <section class="section-sedes">
+        <div class="contenido-sedes container" style="display: flex; flex-direction: row">
+        <section class="contenedor-titulos-sedes container">
+            <h3>Conoce</h3>
+            <h2>Nuestras Sedes</h2>
+            </section>
 
-    <!-- Enunciado 2 -->
-    <section class="section-imperio2">
-        <div class="contenido-imperio2 container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
-                <h3>Transforma tu <span>vida</span></h3>
-                <p>Nuestra misión es guiarte hacia un cambio positivo en tu vida a través del ejercicio. Nuestro equipo de expertos en bienestar está aquí para apoyarte en tu camino hacia una vida más saludable y activa. Estamos comprometidos a proporcionarte las herramientas y el apoyo necesarios para que puedas transformar tu vida de manera segura y efectiva. ¡Juntos, lograremos tus metas de bienestar!.</p>
+            <div class="contenedor-sedes">
+              <a href="{{route ('sedesTunja')}}">
+                <div class="cardsede cardsede-tunja">
+                  <div class="cardsede-img">
+                    <img src="https://www.rocfit.com/wp-content/uploads/2020/07/montar-un-gimnasio-en-tu-comunidad-de-vecinos-1.jpeg" alt="">
+                  </div>
+                  <div class="cardsede-info">
+                    <p>Tunja</p>
+                  </div>                  
                 </div>
-                <div class="col-numero2 col-12 col-sm-12 col-md-12 col-lg-3">
-                    <h2>02</h2>
+              </a>
+              <a href="{{route ('sedesBarbosa')}}">
+                <div class="cardsede cardsede-barbosa">
+                <div class="cardsede-img">
+                    <img src="https://sportsolutions.com.mx/wp-content/uploads/2021/01/como-renovar-gimnasio-residencial-despues.jpg" alt="">
+                  </div>
+                  <div class="cardsede-info">
+                    <p>Barbosa</p>
+                  </div>        
                 </div>
+              </a>
             </div>
         </div>
     </section>
