@@ -19,7 +19,7 @@
     </x-slot>
 
     <!-- Hero Section -->
-    <div class="hero-section conatiner-fluid" style="position: relative;">
+    <div class="hero-section" style="position: relative;">
         <img src="{{ asset('images/banner/banner1.jpg') }}" alt="" class="img-ajustable1">
         <div class="texto-hero">
             <h1>EL IMPERIO DE LA DISCIPLINA</h1>
@@ -66,7 +66,7 @@
 
     <!-- Section Sedes -->
     <section class="section-sedes">
-        <div class="contenido-sedes container" style="display: flex; flex-direction: row">
+        <div class="contenido-sedes container">
         <section class="contenedor-titulos-sedes container">
             <h3>Conoce</h3>
             <h2>Nuestras Sedes</h2>

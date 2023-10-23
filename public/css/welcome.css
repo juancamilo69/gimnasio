@@ -266,7 +266,7 @@ footer i {
     .section-sedes {
         padding-top: 60px;
         padding-bottom: 67px;
-        height: 105%;
+        height: 67%;
     }
 
     .contenedor-titulos-sedes {
@@ -299,6 +299,7 @@ footer i {
         font-size: 22px;
     }
 }
+
 @media screen and (max-width: 767px) {
     .img-ajustable1 {
         content: url(../images/banner/banner1-responsive.jpg);
@@ -313,7 +314,7 @@ footer i {
 
 @media screen and (max-width: 450px) {
     .section-sedes {
-        height: 110%;
+        height: 71%;
     }
 }
 

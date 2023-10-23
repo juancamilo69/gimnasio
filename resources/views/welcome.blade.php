@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Custom Css -->
-        <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
         <link rel="stylesheet" href="{{ asset('css/general.css') }}">
         <!-- Defautl Css -->
         @extends('default')
@@ -31,7 +31,7 @@
     </head>
     <body class="antialiased">
         
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter selection:bg-red-500 selection:text-white">
+        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center bg-gray-100 dark:bg-dots-lighter selection:bg-red-500 selection:text-white">
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
@@ -49,7 +49,7 @@
             <!-- Hero section -->
             <section>
     <!-- Hero Section -->
-    <div class="hero-section conatiner-fluid" style="position: relative;">
+    <div class="hero-section" style="position: relative;">
         <img src="{{ asset('images/banner/banner1.jpg') }}" alt="" class="img-ajustable1">
         <div class="texto-hero">
             <h1>EL IMPERIO DE LA DISCIPLINA</h1>
@@ -62,7 +62,7 @@
     <!-- Membresias -->
     <div class="contenedor-body-box">
        <div class="membresias-card max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <section class="contenedor-titulos-cards container mx-0">
+            <section class="contenedor-titulos-cards container">
             <h3>Nuestros</h3>
             <h2>Planes</h2>
             </section>
@@ -94,43 +94,35 @@
         </div>
     </div>
 
-    <!-- Enunciado el imperio de la disciplina -->
-    <section class="section-imperio">
-        <div class="contenido-imperio container">
-            <div class="row">
-                <div class="col-numero col-12 col-sm-12 col-md-12 col-lg-3">
-                    <h2>01</h2>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
-                <h3>El imperio de la <span>disciplina</span></h3>
-                <p>¡Bienvenidos al sitio web de Reich Gym!
-                    En Reich Gym, nuestra misión es ayudarte a alcanzar tus metas de acondicionamiento 
-                    físico y salud. Nuestro equipo de entrenadores altamente capacitados está comprometido
-                    para brindarte la mejor experiencia posible y así puedas alcanzar tus objetivos de forma 
-                    segura y eficiente.</p>
-                </div>
-                <!-- <div class="col col-lg-3">
-                    <img src="{{ asset('images/recursos-pagina/personas-ejercicio.svg') }}" alt="Ejercicio gym" class="img-imperio img-responsive">
-                </div> -->
-            </div>
-        </div>
-    </section>
+    <!-- Section Sedes -->
+    <section class="section-sedes">
+        <div class="contenido-sedes container">
+        <section class="contenedor-titulos-sedes container">
+            <h3>Conoce</h3>
+            <h2>Nuestras Sedes</h2>
+            </section>
 
-    <!-- Enunciado 2 -->
-    <section class="section-imperio2">
-        <div class="contenido-imperio2 container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-9">
-                <h3>El imperio de la <span>disciplina</span></h3>
-                <p>¡Bienvenidos al sitio web de Reich Gym!
-                    En Reich Gym, nuestra misión es ayudarte a alcanzar tus metas de acondicionamiento 
-                    físico y salud. Nuestro equipo de entrenadores altamente capacitados está comprometido
-                    para brindarte la mejor experiencia posible y así puedas alcanzar tus objetivos de forma 
-                    segura y eficiente.</p>
+            <div class="contenedor-sedes">
+              <a href="{{route ('sedesTunja')}}">
+                <div class="cardsede cardsede-tunja">
+                  <div class="cardsede-img">
+                    <img src="https://www.rocfit.com/wp-content/uploads/2020/07/montar-un-gimnasio-en-tu-comunidad-de-vecinos-1.jpeg" alt="">
+                  </div>
+                  <div class="cardsede-info">
+                    <p>Tunja</p>
+                  </div>                  
                 </div>
-                <div class="col-numero2 col-12 col-sm-12 col-md-12 col-lg-3">
-                    <h2>02</h2>
+              </a>
+              <a href="{{route ('sedesBarbosa')}}">
+                <div class="cardsede cardsede-barbosa">
+                <div class="cardsede-img">
+                    <img src="https://sportsolutions.com.mx/wp-content/uploads/2021/01/como-renovar-gimnasio-residencial-despues.jpg" alt="">
+                  </div>
+                  <div class="cardsede-info">
+                    <p>Barbosa</p>
+                  </div>        
                 </div>
+              </a>
             </div>
         </div>
     </section>
