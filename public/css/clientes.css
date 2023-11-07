@@ -2,20 +2,27 @@
 
 .hero {
     margin-bottom: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
 }
 
 /* Sección filtrar  */
 
 .titulo-filtrar {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .select-membresia {
     outline: none;
     border: none;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 0.5rem;
     margin-right: 10px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
+}
+
+.select-membresia .first-option {
+    color: #595c5f;
 }
 
 .btn-buscar-filtro {
@@ -23,7 +30,8 @@
     background-color: #252525;
     color: #ffff;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 /* Tabla y buscador de tabla */
@@ -39,14 +47,23 @@
     width: 50px;
     height: 32px;
     border: none;
-    border-radius: 5px;
-    background-color: #8ddc97;
+    border-radius: 4px;
+    background-color: #252525;
+    color: #fff;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 #buscador {
     width: 40%;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     margin-top: 20px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
+    border: none;
+}
+
+table {
+    box-shadow: 0 2px 6px 0 rgba(136, 148, 171, 0.2),
+        0 24px 20px -24px rgba(71, 82, 107, 0.1);
 }
 
 table th {
@@ -83,7 +100,8 @@ table td {
     height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #8ddc97;
+    background-color: #252525;
+    color: #fff;
 }
 
 .td-acciones {

@@ -12,9 +12,8 @@
 
         <div>
             <form action="">
-            <h2 class="titulo-filtrar">Filtrar por:</h2>
             <select class="select-membresia" name="tipoPlan" id="">
-            <option value="P0" selected>Seleccione membresía</option>
+            <option value="P0" selected>Filtrar tipo membresía</option>
             <option value="P1">Plan individual</option>
             <option value="P2">Plan pareja</option>
             </select>
@@ -29,8 +28,8 @@
             </div>
         </div>
 
-    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
-                                    <table id="table" class="table table-hover table align-middle">
+    <div class="table-container table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+                                    <table id="table" class="table table-dark table-hover table align-middle table-striped">
                                         <thead class="encabezado-tabla align-middle">
                                             <tr>
                                             <th>Nombre</th>
