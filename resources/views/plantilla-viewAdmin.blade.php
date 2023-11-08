@@ -81,7 +81,10 @@
     </div>
 <!-- {{-- Contenido de la pagina. --}} -->
     <div class="main-content">
-        @yield('contenido')
+        <div class="inside-content">
+            @yield('contenido')
+        </div>
+        
     </div>
 
 </body>
