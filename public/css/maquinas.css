@@ -1,7 +1,18 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
 /* Hero */
 
 .hero {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
+}
+
+.hero h5 {
+    font-weight: 700;
 }
 
 /* Sección filtrar  */
@@ -13,30 +24,26 @@
 .select-sedeMaquinas {
     outline: none;
     border: none;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 5px 15px 5px 12px;
+    border-radius: 0.3rem;
     margin-right: 10px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 .btn-buscar-filtro {
     padding: 5px 15px;
-    background-color: #252525;
-    color: #ffff;
+    background-color: #f2f2f8;
+    color: #252525;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
-/*buscador de cards */
+/* Tabla y buscador de tabla */
 
 .titulo_input {
     display: flex;
     margin-bottom: 30px;
-}
-
-#buscador {
-    width: 40%;
-    border-radius: 10px;
-    margin-top: 20px;
 }
 
 .titulo_input .btn-crear-maquina button {
@@ -45,8 +52,18 @@
     width: 50px;
     height: 32px;
     border: none;
-    border-radius: 5px;
-    background-color: #8ddc97;
+    border-radius: 3px;
+    background-color: #f2f2f8;
+    color: #252525;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
+}
+
+#buscador {
+    width: 40%;
+    border-radius: 0.3rem;
+    margin-top: 20px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
+    border: none;
 }
 
 /* Cards máquinass */
@@ -54,6 +71,11 @@
 .card {
     border: none;
     border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.card-img {
+    border: 1px solid #fff;
 }
 
 .card .card-title {
@@ -88,4 +110,45 @@
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+    /* Tabla y buscador de tabla */
+
+    .titulo_input {
+        flex-direction: column;
+    }
+
+    #buscador {
+        width: 60%;
+        margin: 0;
+    }
+
+    .titulo_input {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    /* Tabla y buscador de tabla */
+
+    .btn-buscar-filtro {
+        display: block;
+        margin-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    /* Tabla y buscador de tabla */
+
+    .btn-buscar-filtro {
+        margin-top: 20px;
+    }
 }

@@ -18,11 +18,11 @@
 </head>
 <body>
 {{-- Logo, foto de perfil, nombre y cargo. --}}
-    <div class="sidebar-og">
+    <div class="sidebar-og active">
         <div class="top">
             <div class="logo">
                 <i class='bx bx-dumbbell'></i>
-                <span>GYM-REICH</span>
+                <span class="titulo-reich">GYM-REICH</span>
             </div>
             <i class="bx bx-menu" id="btn"></i>
         </div>
@@ -35,6 +35,13 @@
         </div>
 <!-- {{-- Lista o menu. --}} -->    
         <ul class="contenedor-nav">
+            <li>
+                <a href="{{route ('viewAdmin')}}">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-item-span">Principal</span>
+                </a>
+                <span class="tooltip-og"></span>
+            </li>
             <li>
                 <a href="{{route ('clientes')}}">
                     <i class="fa-solid fa-user"></i>
@@ -95,7 +102,7 @@
     };
 
 </script>
-
+    
 </html>
 
 @endrole

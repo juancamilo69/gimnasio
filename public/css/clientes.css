@@ -1,12 +1,30 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
 /* Hero */
 
 .hero {
-    margin-bottom: 50px;
-    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
     color: #fff;
+    display: flex;
+}
+
+.hero h5 {
+    font-weight: 700;
 }
 
 /* Sección filtrar  */
+
+/* .content-filtrar {
+    background-color: #212529;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -3px rgba(255, 255, 255, 0.1);
+    padding: 20px 0px 5px 30px;
+    margin-bottom: 20px;
+} */
 
 .titulo-filtrar {
     font-size: 20px;
@@ -15,20 +33,16 @@
 .select-membresia {
     outline: none;
     border: none;
-    padding: 5px 15px 5px 15px;
-    border-radius: 0.5rem;
+    padding: 5px 15px 5px 12px;
+    border-radius: 0.3rem;
     margin-right: 10px;
     box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
-.select-membresia .first-option {
-    color: #595c5f;
-}
-
 .btn-buscar-filtro {
     padding: 5px 15px;
-    background-color: #252525;
-    color: #ffff;
+    background-color: #f2f2f8;
+    color: #252525;
     border: none;
     border-radius: 4px;
     box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
@@ -47,15 +61,15 @@
     width: 50px;
     height: 32px;
     border: none;
-    border-radius: 4px;
-    background-color: #252525;
-    color: #fff;
+    border-radius: 3px;
+    background-color: #f2f2f8;
+    color: #252525;
     box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 #buscador {
     width: 40%;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     margin-top: 20px;
     box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
     border: none;
@@ -68,11 +82,13 @@ table {
 
 table th {
     font-size: 15px;
+    font-weight: 600;
 }
 
 table td {
     height: 80px;
     font-size: 15px;
+    font-weight: 200;
 }
 
 /* table .td-duracionmembresia,
@@ -100,8 +116,8 @@ table td {
     height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #252525;
-    color: #fff;
+    background-color: #f2f2f8;
+    color: #252525;
 }
 
 .td-acciones {

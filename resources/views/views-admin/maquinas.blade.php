@@ -8,20 +8,18 @@
 <link rel="stylesheet" href="{{ asset('css/maquinas.css') }}">
 <!-- Hero Section -->
 <Section class="hero">
-    <h1>Máquinas</h1>
     <h5>Registro de máquinas</h5>
 </Section>
 
         <div>
             <form action="">
-            <h2 class="titulo-filtrar">Filtrar por:</h2>
             <select class="select-sedeMaquinas" name="seleccionarSedeMaquinas" id="">
             <option value="S0" selected>Seleccione sede</option>
             <option value="S1">Sede Muiscas</option>
             <option value="S2">Sede Centro</option>
             <option value="S3">Sede Barbosa</option>
             </select>
-            <a href=""><button class="btn-buscar-filtro">Buscar</button></a>
+            <a href=""><button class="btn-buscar-filtro"><i class="fa-solid fa-magnifying-glass"></i></button></a>
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
@@ -31,35 +29,38 @@
             </div>
         </div>
 <!-- CARD ELEMENTOS -->
-<div class="cards-membresias-contenedor row row-cols-1 row-cols-md-3 g-4" id="cardId">
+<div class="cards-membresias-contenedor row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="cardId">
     @foreach ($maquinas as $maquina)
-                    <div class="col col-sm-6">
-                        <div class="card h-100 w-100" >
-                        <img src="{{$maquina->IMGMAQUINA}}" class="card-img-top img-fixed-size" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{$maquina->NOMBREMAQUINA}}</h5>
-                            <h2 class="card-text-grupomuscular">{{$maquina->GRUPOMUSCULAR}}</h2>
-                            <P class="card-text card-text-fechacompra">{{$maquina->FECHACOMPRA}}</P>
-                            <hr class="hr hr-blurry" />
-                            <P class="card-text card-text-nombresede">{{$maquina->nombreSede}}</P>
-                            <P class="card-text card-text-ciudad">{{$maquina->CIUDAD}}</P>
-                            <P class="card-text card-text-direccion">{{$maquina->DIRECCION}}</P>
-                            <a href=""><button type="button" class="btns btn btn-dark">{{$maquina->SOPORTE}}</button></a>
-                        </div>
-                        </div>
-                    </div>
-                    <script>
-                        $(document).ready(function(){
-                            $("#buscador").on("keyup", function() {
-                            var value = $(this).val().toLowerCase();
-                            $("#cardId div").filter(function() {
-                                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                            });
-                            });
-                        });
-                    </script>          
-                    @endforeach
-                    
-    </div>
+        <div class="col col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 w-100 text-white bg-dark">
+                <img src="{{$maquina->IMGMAQUINA}}" class="card-img card-img-top img-fixed-size" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{$maquina->NOMBREMAQUINA}}</h5>
+                    <h2 class="card-text-grupomuscular">{{$maquina->GRUPOMUSCULAR}}</h2>
+                    <P class="card-text card-text-fechacompra">{{$maquina->FECHACOMPRA}}</P>
+                    <hr class="hr hr-blurry" />
+                    <P class="card-text card-text-nombresede">{{$maquina->nombreSede}}</P>
+                    <P class="card-text card-text-ciudad">{{$maquina->CIUDAD}}</P>
+                    <P class="card-text card-text-direccion">{{$maquina->DIRECCION}}</P>
+                    <a href=""><button type="button" class="btns btn btn-dark">{{$maquina->SOPORTE}}</button></a>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#buscador").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#cardId div").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+
+
 
 @endsection

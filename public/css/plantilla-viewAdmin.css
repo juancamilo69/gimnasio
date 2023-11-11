@@ -19,6 +19,7 @@
     background-color: #252525;
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
+    border-right: 1px solid #fff;
 }
 
 .sidebar-og.active ~ .main-content {
@@ -68,6 +69,11 @@
     margin-right: 5px;
 }
 
+.top .logo span {
+    font-weight: bold;
+    margin-left: 0.6rem;
+}
+
 .user {
     display: flex;
     align-items: center;
@@ -104,13 +110,12 @@
     position: relative;
     list-style-type: none;
     height: 50px;
-    width: 90%;
+    width: 100%;
     margin: 0.8rem 0;
     line-height: 50px;
 }
 
 .sidebar-og ul li a {
-    background-color: #646464;
     color: #fff;
     display: flex;
     align-items: center;
@@ -137,6 +142,8 @@
 
 .sidebar-og.active .nav-item-span {
     opacity: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
 }
 
 .sidebar-og ul li .tooltip-og {
@@ -162,7 +169,7 @@
 
 .main-content {
     position: relative;
-    background-color: #646464;
+    background-color: #252525;
     min-height: 100vh;
     top: 0;
     left: 80px;
@@ -189,6 +196,7 @@
 
     .top .logo span {
         font-size: 0.9rem;
+        margin-left: 0.2rem;
     }
 
     .sidebar-og.active ul li a i {

@@ -3,16 +3,16 @@
 @section('contenido')
 <link rel="stylesheet" href="{{ asset('css/suplementosAdmin.css') }}">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
 <!-- Hero Section -->
 <Section class="hero">
-    <h1>Suplementos</h1>
     <h5>Registro de suplementos</h5>
 </Section>
 
 <div>
             <form action="">
-            <h2 class="titulo-filtrar">Filtrar por:</h2>
             <select class="select-suplementos" name="seleccionarSuplemento" id="">
             <option value="S0" selected>Seleccione suplemento</option>
             <option value="Creatina">Creatinas</option>
@@ -25,7 +25,7 @@
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
-                <div class="btn-crear-cliente">
+                <div class="btn-crear-suplemento">
                     <a href="{{route ('crearSuplementos')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
                 </div>
             </div>
@@ -33,7 +33,7 @@
         </div>
 
     <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
-                                    <table id="table" class="table table-hover table align-middle">
+                                    <table id="table" class="table table-dark table-hover table align-middle table-striped">
                                         <thead class="encabezado-tabla align-middle">
                                             <tr>
                                             <th>Nombre</th>
@@ -53,7 +53,11 @@
                                                 <td>{{ $suplemento->NOMBRE }}</td>
                                                 <td>{{ $suplemento->MARCA }}</td>
                                                 <td>{{ $suplemento->TIPO }}</td>
-                                                <td>{{ $suplemento->DESCRIPCION }}</td>
+                                                <td>
+                                                <span class="descripcion-corta">{{ Illuminate\Support\Str::limit($suplemento->DESCRIPCION, $limit = 20, $end = '...') }}</span>
+
+                                                    <span class="descripcion-completa" style="display:none;">{{ $suplemento->DESCRIPCION }}</span> <button class="btn-ver-descripcion" data-toggle="modal" data-target="#modalDescripcion">Ver descripción</button>
+                                                </td>
                                                 <td>{{ $suplemento->STOCK }}</td>
                                                 <td>${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</td>
                                                 <td>{{ $suplemento->IMGSUPLEMENTO }}</td>
@@ -74,4 +78,27 @@
                                         </tbody>
                                     </table>
                         </div>
+
+                        <!-- MODAL DESCRIPCIÓN -->
+                        <div class="modal fade" id="modalDescripcion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción Completa</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="descripcionModal" style="max-height: 300px; overflow-y: auto;"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="{{ asset('js/modal-desc.js') }}"></script>
+
 @endsection

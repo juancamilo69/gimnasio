@@ -1,62 +1,42 @@
-/* General */
-.color-txt-semiblack {
-    color: #212529;
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
 }
 
-.contenedor-mayor {
-    margin-top: 50px;
-}
-
-/* hero */
+/* Hero */
 
 .hero {
-    margin-bottom: 50px;
-}
-
-.hero h1 {
-    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+    color: #fff;
+    display: flex;
 }
 
 .hero h5 {
-    font-family: "Roboto", sans-serif;
+    font-weight: 700;
 }
 
 /* Sección filtrar  */
 
 .titulo-filtrar {
     font-size: 25px;
-    font-family: "Roboto", sans-serif;
 }
 
 .select-suplementos {
     outline: none;
     border: none;
-    padding: 5px 40px 5px 10px;
-    border-radius: 10px;
+    padding: 5px 15px 5px 12px;
+    border-radius: 0.3rem;
     margin-right: 10px;
-    font-family: "Roboto", sans-serif;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 .btn-buscar-filtro {
     padding: 5px 15px;
-    background-color: #424242;
-    color: #ffff;
+    background-color: #f2f2f8;
+    color: #252525;
     border: none;
-    border-radius: 10px;
-}
-
-/* buscador de cards */
-
-.titulo_input {
-    display: flex;
-    margin-bottom: 30px;
-}
-
-#buscador {
-    width: 40%;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 /* Tabla y buscador de tabla */
@@ -66,20 +46,35 @@
     margin-bottom: 30px;
 }
 
+.titulo_input .btn-crear-suplemento button {
+    margin-top: 22px;
+    margin-left: 10px;
+    width: 50px;
+    height: 32px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f2f2f8;
+    color: #252525;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
+}
+
 #buscador {
     width: 40%;
-    border-radius: 10px;
+    border-radius: 0.3rem;
     margin-top: 20px;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
+    border: none;
 }
 
 table th {
     font-size: 15px;
+    font-weight: 600;
 }
 
 table td {
     height: 80px;
-    width: 10%;
     font-size: 15px;
+    font-weight: 200;
 }
 
 /* table .td-duracionmembresia,
@@ -101,22 +96,29 @@ table td {
     border-top: 2px solid #252525;
 }
 
-.titulo_input .btn-crear-cliente a button {
-    margin-top: 22px;
-    margin-left: 10px;
-    width: 32px;
-    height: 32px;
+/* Modal descripción */
+
+#descripcionModal {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+button.btn-ver-descripcion {
     border: none;
-    border-radius: 5px;
-    background-color: #8ddc97;
+    padding: 2px 5px 2px 5px;
+    border-radius: 3px;
+    background-color: #f2f2f8;
+    color: #252525;
+    box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
 .td-acciones button {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #8ddc97;
+    background-color: #f2f2f8;
+    color: #252525;
 }
 
 /* Responsive */

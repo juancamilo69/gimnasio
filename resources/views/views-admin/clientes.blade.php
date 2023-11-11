@@ -6,18 +6,17 @@
 
 <!-- Hero Section -->
 <Section class="hero">
-    <h1>Clientes</h1>
     <h5>Registro de clientes</h5>
 </Section>
 
-        <div>
+        <div class="content-filtrar">
             <form action="">
             <select class="select-membresia" name="tipoPlan" id="">
             <option value="P0" selected>Filtrar tipo membresía</option>
             <option value="P1">Plan individual</option>
             <option value="P2">Plan pareja</option>
             </select>
-            <a href="{{route('planpareja')}}"><button class="btn-buscar-filtro" onclick="cambiarTexto()">Buscar</button></a>
+            <a href="{{route('planpareja')}}"><button class="btn-buscar-filtro" onclick="cambiarTexto()"><i class="fa-solid fa-magnifying-glass"></i></button></a>
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
