@@ -1,0 +1,159 @@
+/* General */
+
+.navigation-links a {
+    text-decoration: none;
+}
+
+.color-txt-semiblack {
+    color: #212529;
+}
+
+.contenedor-mayor {
+    margin-top: 50px;
+}
+
+/* hero */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.hero h5 {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Sección filtrar  */
+
+.titulo-filtrar {
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+}
+
+.select-prendas {
+    outline: none;
+    border: none;
+    padding: 5px 40px 5px 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-buscar-filtro {
+    padding: 5px 15px;
+    background-color: #424242;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+}
+
+/* buscador de cards */
+
+.titulo_input {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#buscador {
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Cards suplementos */
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+}
+
+.card .card-text-tipo {
+    margin-bottom: 0;
+    color: #6e6e6e;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.card .card-text-color {
+    color: #6e6e6e;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.card .btn-comprar {
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-top: 15px;
+    padding: 0px 32px;
+}
+
+.card .card-text-precio {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.card img {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card img:hover {
+    transform: scale(0.9);
+}
+
+.img-fixed-size {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px) {
+    /* Tabla y buscador de tabla */
+
+    .titulo_input {
+        flex-direction: column;
+    }
+
+    #buscador {
+        width: 60%;
+        margin: 0;
+    }
+
+    .titulo_input {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    /* Tabla y buscador de tabla */
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    /* Tabla y buscador de tabla */
+
+    .btn-buscar-filtro {
+        margin-top: 20px;
+    }
+}

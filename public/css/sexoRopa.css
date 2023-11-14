@@ -1,0 +1,65 @@
+/* Vista sedes */
+
+.contenedor-seleccionar-sexo {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-seleccionar-sexo .card {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.contenedor-seleccionar-sexo .card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenedor-seleccionar-sexo .card-img {
+    filter: brightness(60%);
+}
+
+.contenedor-seleccionar-sexo .card-sexo-mujer {
+    margin-right: 10px;
+    border: none;
+}
+
+.contenedor-seleccionar-sexo .card-sexo-hombre {
+    margin-left: 10px;
+    border: none;
+}
+
+.img-fixed-size {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 767px) {
+    /* Vista sedes */
+
+    .contenedor-seleccionar-sexo {
+        flex-direction: column;
+    }
+
+    /* Vista sedesTunja */
+
+    .contenedor-seleccionar-sexo .card-sexo-mujer {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    /* Vista sedesBarbosa */
+
+    .contenedor-seleccionar-sexo .card-sexo-hombre {
+        margin-left: 0px;
+    }
+}

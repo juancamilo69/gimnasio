@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+.hero-section img {
+    filter: brightness(80%);
+}
+
+.texto-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+}
+
+.texto-hero h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mouse {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(270deg);
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.scroll {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    margin-top: -4px;
+    width: 16px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Cards membresías */
+
+.cardm {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 50px 35px 50px 35px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
+    font-family: "Figtree", sans-serif;
+}
+
+.cardm-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2a324b;
+}
+
+.cardm-text {
+    font-weight: 400;
+    color: #727a69;
+}
+
+.cardm-precio {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    color: #2a324b;
+}
+
+.cardm-precio span {
+    color: #727a69;
+    font-size: 15px;
+}
+
+.cardm-btn {
+    background-color: #2a324b;
+    color: #fff;
+    height: 40px;
+    width: 90%;
+    display: block;
+    margin: 80px auto 0 auto;
+    border-radius: 20px;
+}
+
+.texto-bienvenido {
+    margin-top: 80px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 120%;
+    letter-spacing: 3px;
+}
+
+.contenedor-titulos-cards {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.contenedor-titulos-cards h3 {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: #2a324b;
+}
+
+.contenedor-titulos-cards h2 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: #2a324b;
+}
+
+/* Section Sedes */
+
+.section-sedes {
+    background-color: #e3e3e3;
+    height: 300px;
+}
+
+.contenido-sedes {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.contenedor-titulos-sedes h3 {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: #2a324b;
+}
+
+.contenedor-titulos-sedes h2 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+    color: #2a324b;
+}
+
+/* Cards Sedes */
+
+.contenedor-sedes {
+    display: flex;
+}
+
+.cardsede {
+    background-color: #fff;
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor-sedes .cardsede-tunja {
+    margin-right: 30px;
+}
+
+.cardsede-img {
+    height: 75%;
+}
+
+.cardsede-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardsede-info {
+    height: 25%;
+    padding: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    font-weight: bold;
+    color: #2a324b;
+}
+
+/* Section Servicios */
+
+.contenedor-introduccion-servicios {
+    margin-top: 80px;
+}
+
+.textos-introduccion-servicios {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.contenedor-introduccion-servicios h3 {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenedor-introduccion-servicios .texto-recibes {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+}
+
+/* Cards Servicios */
+
+.cards-servicios-contenedor .card {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+}
+
+.cards-servicios-contenedor .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+}
+
+.cards-servicios-contenedor .card-body p {
+    font-size: 15px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+/* Zonas especializadas */
+.zonas-especializadas {
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.texto-zonas {
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 50px;
+}
+
+/* footer */
+footer i {
+    color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .section-sedes {
+        padding-top: 60px;
+        padding-bottom: 67px;
+        height: 67%;
+    }
+
+    .contenedor-titulos-sedes {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .contenido-sedes {
+        display: block;
+    }
+
+    .contenedor-sedes {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor-sedes .cardsede-tunja {
+        margin-right: 0;
+        margin-bottom: 45px;
+    }
+
+    .cardsede {
+        height: 300px;
+        width: 500px;
+    }
+
+    .cardsede-info {
+        padding: 20px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .img-ajustable1 {
+        content: url(../images/banner/banner1-responsive.jpg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardsede {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .section-sedes {
+        height: 71%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .cardsede {
+        width: 300px;
+    }
+}
