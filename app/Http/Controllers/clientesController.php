@@ -42,7 +42,8 @@ class clientesController extends Controller
 
     public function crearClienteForm()
     {
-        return view('views-admin/crearCliente'); // Nombre de la vista del formulario de creación
+        $sedes = sedes::all();
+        return view('views-admin/crearCliente', compact('sedes')); // Nombre de la vista del formulario de creación
     }
 
     // Método para guardar al cliente en la base de datos
@@ -74,7 +75,8 @@ class clientesController extends Controller
 
     public function crearMembresiaForm()
     {
-        return view('views-admin/crearMembresia'); // Nombre de la vista del formulario de creación
+        $membresiasData = Tipomembresias::all();
+        return view('views-admin/crearMembresia', compact('membresiasData')); // Nombre de la vista del formulario de creación
     }
 
     // Método para guardar al cliente en la base de datos
