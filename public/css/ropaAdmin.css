@@ -127,7 +127,6 @@ button.btn-ver-descripcion {
     background-color: #f2f2f8;
     color: #252525;
     box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
-    width: 200px;
 }
 
 .close {
@@ -144,6 +143,7 @@ button.btn-ver-descripcion {
 .close:hover {
     color: #4d4d4d;
 }
+
 
 /* Responsive */
 

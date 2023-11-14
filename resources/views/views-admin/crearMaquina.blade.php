@@ -1,9 +1,16 @@
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')
-<form action="{{ route('guardarMaquina') }}" method="POST">
+<link rel="stylesheet" href="{{ asset('css/formularios/crearMaquina.css') }}">
+<div class="form-content container mt-5">
+
+    <div class="mb-4">
+    <h2 class="text-center">Formulario de Creación de Máquinas</h2>
+    <p class="lead text-center">Por favor, completa los siguientes campos para añadir una máquina.</p>
+    </div>
+
+  <form class="row g-3 needs-validation" action="{{ route('guardarMaquina') }}" method="POST">
 @csrf 
-<div class="container py-5">
 <div class="mb-3">
   <label for="formGroupExampleInput" class="form-label">Nombre máquina</label>
   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre máquina" name="NOMBREMAQUINA">
@@ -28,7 +35,12 @@
   <label for="formGroupExampleInput2" class="form-label">Soporte</label>
   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Soporte" name="SOPORTE">
 </div>
+
+<div class="text-end col-12">
+              <button class="btn btn-primary" type="submit">Crear</button>
+        
 </div>
-<button type="submit">Guardar</button>
 </form>
+</div>
+
 @endsection
