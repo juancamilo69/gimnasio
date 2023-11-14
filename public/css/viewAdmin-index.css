@@ -12,6 +12,7 @@
         grid-template-areas:
             "hero   hero"
             "big1   big1"
+            "big2   big2"
             "med1   med1"
             "med2   med2"
             "small1 small2"
@@ -29,6 +30,7 @@
                 "hero   hero   hero   med1   med1"
                 "hero   hero   hero   med2   med2"
                 "big1   big1   big1   big1   big1"
+                "big2   big2   big2   big2   big2"
                 "small1 small2 small3 small4 small5"
                 "small6 small7 small8 small9 small10";
         }
@@ -59,34 +61,7 @@
         grid-area: med2;
     }
     .grid .item:nth-child(5) {
-        grid-area: small1;
-    }
-    .grid .item:nth-child(6) {
-        grid-area: small2;
-    }
-    .grid .item:nth-child(7) {
-        grid-area: small3;
-    }
-    .grid .item:nth-child(8) {
-        grid-area: small4;
-    }
-    .grid .item:nth-child(9) {
-        grid-area: small5;
-    }
-    .grid .item:nth-child(10) {
-        grid-area: small6;
-    }
-    .grid .item:nth-child(11) {
-        grid-area: small7;
-    }
-    .grid .item:nth-child(12) {
-        grid-area: small8;
-    }
-    .grid .item:nth-child(13) {
-        grid-area: small9;
-    }
-    .grid .item:nth-child(14) {
-        grid-area: small10;
+        grid-area: big2;
     }
 }
 
@@ -119,34 +94,7 @@
         flex: 0 1 calc(100% - 1.5vw);
     }
     .grid .item:nth-child(5) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(6) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(7) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(8) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(9) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(10) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(11) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(12) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(13) {
-        flex: 0 1 calc(50% - 1.5vw);
-    }
-    .grid .item:nth-child(14) {
-        flex: 0 1 calc(50% - 1.5vw);
+        flex: 0 1 calc(100% - 1.5vw);
     }
 
     @media screen and (min-width: 750px) {
@@ -173,34 +121,7 @@
             flex: 0 1 calc(50% - 1.5vw);
         }
         .grid .item:nth-child(5) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(6) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(7) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(8) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(9) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(10) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(11) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(12) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(13) {
-            flex: 0 1 calc(25% - 1.5vw);
-        }
-        .grid .item:nth-child(14) {
-            flex: 0 1 calc(25% - 1.5vw);
+            flex: 0 1 calc(50% - 1.5vw);
         }
     }
 }
@@ -293,8 +214,8 @@ body {
     align-items: center;
     position: relative;
     z-index: 2;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 5px;
     border: 1px solid #ffffff;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
@@ -318,12 +239,12 @@ body {
 
 .tooltip {
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     padding: 0.25rem 1rem;
     border-radius: 5px;
-    background: #29343d;
+    background: #fff;
     opacity: 0;
-    color: #cedfe9;
+    color: #252525;
     font-size: 0.875rem;
     transition: opacity 500ms, transform 500ms;
 }
@@ -337,13 +258,13 @@ body {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #29343d;
+    border-bottom: 10px solid #fff;
 }
 
 .grid .item:hover .tooltip,
 .grid .item:focus .tooltip {
     opacity: 1;
-    transform: translateY(70px);
+    transform: translateY(90px);
 }
 
 .grid .item {
@@ -366,8 +287,9 @@ body {
 }
 
 .grid .item:nth-child(1) {
-    background-image: url(../images/banner/banner1.jpg);
+    background-image: url(https://img.freepik.com/foto-gratis/hombres-mujeres-gimnasio-montando-bicicleta-juntos-generados-felizmente-ia_188544-10868.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699833600&semt=ais);
     background-size: cover;
+    box-shadow: 0px 0px 40px -20px rgb(255 255 255);
 }
 .grid .item:nth-child(1)::before {
     content: "";
@@ -381,8 +303,10 @@ body {
 }
 
 .grid .item:nth-child(2) {
-    background-image: url(../images/banner/banner1.jpg);
+    background-image: url(https://lazosdelagente.com/wp-content/uploads/2022/03/Suplementos-deportivos-Conoce-los-mitos-y-verdades.png);
     background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 0px 40px -20px rgb(255 255 255);
 }
 .grid .item:nth-child(2)::before {
     content: "";
@@ -391,25 +315,59 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.407);
     filter: brightness(0.7);
 }
 
 .grid .item:nth-child(3) {
-    background-image: linear-gradient(45deg, #838a8f 0%, #c5c5c5 60%);
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230516/pngtree-gym-with-many-weights-in-dark-lighting-image_2549101.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 40px -20px rgb(255 255 255);
 }
+
+.grid .item:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.19);
+    filter: brightness(0.7);
+}
+
 .grid .item:nth-child(4) {
-    background-image: linear-gradient(45deg, #212121 0%, #505050 60%);
+    background-image: url(https://img.freepik.com/fotos-premium/interior-gimnasio-oscuro-adornado-pesas-negras_60438-3047.jpg?size=626&ext=jpg&ga=GA1.1.1016474677.1696636800&semt=ais);
+    background-size: cover;
+    background-position: bottom center;
+    box-shadow: 0px 0px 40px -20px rgb(255 255 255);
 }
-.grid .item:nth-child(5),
-.grid .item:nth-child(6),
-.grid .item:nth-child(7),
-.grid .item:nth-child(8),
-.grid .item:nth-child(9),
-.grid .item:nth-child(10),
-.grid .item:nth-child(11),
-.grid .item:nth-child(12),
-.grid .item:nth-child(13),
-.grid .item:nth-child(14) {
-    background-image: linear-gradient(45deg, #adadad 0%, #333333 60%);
+
+.grid .item:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.19);
+    filter: brightness(0.7);
+}
+
+.grid .item:nth-child(5) {
+    background-image: url(https://www.cleanipedia.com/images/iohqr4whhl17/17n846vOuyu5m4cRtp17L3/c8d72e6401a2f6982a5046ad11af4aff/R2V0dHlJbWFnZXMtMTIyMjgxMjYyNi5qcGc/990w-660h/c%C3%B3mo-lavar-ropa-negra-sin-que-se-desti%C3%B1a.jpg);
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0px 0px 40px -20px rgb(255 255 255);
+}
+
+.grid .item:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.19);
+    filter: brightness(0.7);
 }

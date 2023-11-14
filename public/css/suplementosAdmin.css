@@ -96,6 +96,15 @@ table td {
     border-top: 2px solid #252525;
 }
 
+.td-acciones button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f8;
+    color: #252525;
+}
+
 /* Modal descripción */
 
 #descripcionModal {
@@ -112,13 +121,19 @@ button.btn-ver-descripcion {
     box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.03);
 }
 
-.td-acciones button {
-    width: 30px;
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #4ed164;
+    color: #f2f2f8;
+    border-radius: 50%;
     height: 30px;
+    width: 30px;
     border: none;
-    border-radius: 5px;
-    background-color: #f2f2f8;
-    color: #252525;
+}
+
+.close:hover {
+    color: #4d4d4d;
 }
 
 /* Responsive */

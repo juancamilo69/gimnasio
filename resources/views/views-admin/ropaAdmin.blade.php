@@ -6,13 +6,11 @@
 
 <!-- Hero Section -->
 <Section class="hero">
-    <h1>Ropa</h1>
     <h5>Registro de Prendas</h5>
 </Section>
 
         <div>
             <form action="">
-            <h2 class="titulo-filtrar">Filtrar por:</h2>
             <select class="select-prendas" name="seleccionarRopa" id="">
             <option value="S0" selected>Seleccione ropa</option>
             <option value="Camisetas">Camisetas</option>
@@ -25,14 +23,16 @@
             </form>
             <div class="titulo_input">
                 <input type="text" class="buscador form-control" id="buscador" name="buscador" placeholder="Buscar...">
-                <div class="btn-crear-cliente">
+                <div class="btn-crear-prenda">
                     <a href="{{route ('crearRopa')}}"><button><i class="fa-solid fa-user-plus"></i></button></a>
                 </div>
             </div>
         </div>
 
-    <div class="table-wrapper-scroll-y my-custom-scrollbar table-responsive">
-                                    <table id="table" class="table table-hover table align-middle">
+    <div class="tabla-container-responsive table-wrapper-scroll-y my-custom-scrollbar table-responsive">
+                                    <table id="table" class="table
+                                    table-dark table-hover align-middle
+                                    table-striped">
                                         <thead class="encabezado-tabla align-middle">
                                             <tr>
                                             <th>Nombre</th>
@@ -55,7 +55,11 @@
                                             <tr>
                                                 <td>{{ $prenda->NOMBRE }}</td> 
                                                 <td>{{ $prenda->TIPO }}</td>
-                                                <td>{{ $prenda->DESCRIPCION }}</td>
+                                                <td>
+                                                <span class="descripcion-corta">{{ Illuminate\Support\Str::limit($prenda->DESCRIPCION, $limit = 20, $end = '...') }}</span>
+
+                                                    <span class="descripcion-completa" style="display:none;">{{ $prenda->DESCRIPCION }}</span> <button class="btn-ver-descripcion" data-toggle="modal" data-target="#modalDescripcion">Ver descripción</button>
+                                                </td>
                                                 <td>{{ $prenda->STOCK }}</td>
                                                 <td>${{ number_format($prenda->PRECIO, 0, ',', '.') }}</td>
                                                 <td>{{ $prenda->TALLA }}</td>
@@ -81,4 +85,27 @@
                                         </tbody>
                                     </table>
                         </div>
+
+                        <!-- MODAL DESCRIPCIÓN -->
+                        <div class="modal fade" id="modalDescripcion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción Completa</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="descripcionModal" style="max-height: 300px; overflow-y: auto;"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="{{ asset('js/modal-desc.js') }}"></script>
+
 @endsection
