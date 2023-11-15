@@ -107,4 +107,14 @@ class clientesController extends Controller
         // Redirige a la vista de clientes o a donde desees
         return redirect()->route('clientes'); // Reemplaza 'clientes' con la ruta correcta
     }
+
+    public function edit(string $id)
+    {
+        //
+    }
+
+    public function update(Request $request, string $id)
+    {
+        //
+    }    
 }

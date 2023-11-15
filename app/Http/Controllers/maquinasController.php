@@ -44,7 +44,8 @@ class maquinasController extends Controller
 
     public function crearMaquinaForm()
     {
-        return view('views-admin/crearMaquina'); // Nombre de la vista del formulario de creación
+        $sedes = sedes::all();
+        return view('views-admin/crearMaquina', compact('sedes')); // Nombre de la vista del formulario de creación
     }
 
     // Método para guardar al cliente en la base de datos

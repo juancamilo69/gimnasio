@@ -42,7 +42,8 @@ class elementosController extends Controller
 
     public function crearElementoForm()
     {
-        return view('views-admin/crearElemento'); // Nombre de la vista del formulario de creación
+        $sedes = sedes::all();
+        return view('views-admin/crearElemento', compact('sedes')); // Nombre de la vista del formulario de creación
     }
 
     // Método para guardar al cliente en la base de datos
