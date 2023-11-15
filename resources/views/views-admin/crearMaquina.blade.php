@@ -25,7 +25,12 @@
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Sede</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Sede" name="IDSEDE">
+  <select class="form-select" id="sede" name="IDSEDE">
+    @forelse ($sedes as $nomSede)
+        <option value="{{$nomSede->IDSEDE}}">{{$nomSede->NOMBRE}}</option>
+    @empty
+    @endforelse
+  </select>
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Imágen máquina</label>
@@ -33,7 +38,7 @@
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Soporte</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Soporte" name="SOPORTE">
+  <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Soporte" name="SOPORTE">
 </div>
 
 <div class="text-end col-12">
