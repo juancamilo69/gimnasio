@@ -8,6 +8,7 @@ use App\Models\tipomembresias;
 use App\Models\membresias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 use DB;
 
 class clientesController extends Controller
@@ -21,7 +22,7 @@ class clientesController extends Controller
             ->join('users', 'membresias.id', '=', 'users.id')
             ->join('tipomembresias', 'membresias.IDTIPOSMEMBRESIAS', '=', 'tipomembresias.IDTIPOSMEMBRESIAS')
             ->join('sedes', 'users.IDSEDE', '=', 'sedes.IDSEDE')
-            ->select('users.name', 'users.email', 'sedes.CIUDAD', 'sedes.direccion', 'tipomembresias.NOMBREMEMBRESIA', 'tipomembresias.PRECIO', 'tipomembresias.DURACIONMESES', 'tipomembresias.PLANPAREJA', 'membresias.FECHAMEMBRESIAINICIO', 'FECHAMEMBRESIAFINAL')
+            ->select('users.id', 'users.name', 'users.email', 'sedes.CIUDAD', 'sedes.direccion', 'tipomembresias.NOMBREMEMBRESIA', 'tipomembresias.PRECIO', 'tipomembresias.DURACIONMESES', 'tipomembresias.PLANPAREJA', 'membresias.FECHAMEMBRESIAINICIO', 'FECHAMEMBRESIAFINAL')
             ->where('tipomembresias.PLANPAREJA', '=', 'No')
             ->get();        
          } else {
@@ -76,7 +77,7 @@ class clientesController extends Controller
     public function crearMembresiaForm()
     {
         $membresiasData = Tipomembresias::all();
-        return view('views-admin/crearMembresia', compact('membresiasData')); // Nombre de la vista del formulario de creación
+        return view('views-admin.crearMembresia', compact('membresiasData'));
     }
 
     // Método para guardar al cliente en la base de datos
@@ -110,11 +111,23 @@ class clientesController extends Controller
 
     public function edit(string $id)
     {
-        //
+        $clientes = users::findOrFail($id);
+        $sedes = sedes::all();
+        $membresiasData = Tipomembresias::all();
+        return view('views-admin/editarCliente', ['cliente' => $clientes, 'sedes' => $sedes, 'membresiasData' => $membresiasData]);
     }
 
     public function update(Request $request, string $id)
     {
-        //
+        $clientes = users::findOrFail($id);
+        // return $request->input('sede');
+        $clientes -> update ([
+            'name' => $request->input('name'),
+            'IDSEDE' => $request->input('sede'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+        ]);
+
+        return redirect()->route('clientes');
     }    
 }

@@ -97,6 +97,10 @@ Route::get('/crearSuplementos', function () {
     return view('views-admin/crearSuplementos');
 })->middleware(['auth', 'verified'])->name('crearSuplementos');
 
+Route::get('/editarMembresia', function () {
+    return view('views-admin/editarMembresia');
+})->middleware(['auth', 'verified'])->name('editarMembresia');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -184,5 +188,11 @@ Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
     return view('welcome', ['membresiasData' => $membresiasData]);
 });
+
+// Edit
+Route::get('views-admin/editarCliente/{id}', [App\Http\Controllers\clientesController::class, 'edit'])->name('editarCliente');
+
+// Actualizar
+Route::post('/actualizarCliente/{id}', [App\Http\Controllers\clientesController::class, 'update'])->name('actualizarCliente');
 
 require __DIR__.'/auth.php';
