@@ -56,4 +56,27 @@ class suplementosAdminController extends Controller
 
         return redirect()->route('suplementosAdmin'); 
     }
+
+    public function edit($IDSUPLEMENTO)
+    {
+        $suplemento = suplementos::find($IDSUPLEMENTO);
+        return view('views-admin.editarSuplemento', compact('suplemento'));
+    }
+
+    public function update(Request $request, $IDSUPLEMENTO)
+    {
+        $suplemento = suplementos::find($IDSUPLEMENTO);
+        
+        $suplemento->NOMBRE = $request->input('nombre');
+        $suplemento->MARCA = $request->input('marca');
+        $suplemento->TIPO = $request->input('tipo');
+        $suplemento->DESCRIPCION = $request->input('descripcion');
+        $suplemento->STOCK = $request->input('stock');
+        $suplemento->PRECIO = $request->input('precio');
+        // Puedes agregar la lógica para manejar las imágenes si es necesario
+        
+        $suplemento->save();
+
+        return redirect()->route('suplementosAdmin');
+    }
 }

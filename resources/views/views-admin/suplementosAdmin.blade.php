@@ -62,7 +62,9 @@
                                                 <td>${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</td>
                                                 <td>{{ $suplemento->IMGSUPLEMENTO }}</td>
                                                 <td>{{ $suplemento->IMGTABLANUTRICIONAL }}</td> 
-                                                <td class="td-acciones"><button><i class="fa-solid fa-user-pen"></i></button> <a href="{{route('suplementos.destroy', $suplemento->IDSUPLEMENTO)}}" onclick="return confirm('¿Seguro que quiere eliminar este suplemento?')"><button><i class="fa-solid fa-user-minus"></i></button></a></td>
+                                                <td class="td-acciones">              
+                                                <a href="{{ route('suplementosAdmin.edit', $suplemento->IDSUPLEMENTO) }}"><button><i class="fa-solid fa-user-pen"></i></button></a>
+                                                <a href="{{route('suplementos.destroy', $suplemento->IDSUPLEMENTO)}}" onclick="return confirm('¿Seguro que quiere eliminar este suplemento?')"><button><i class="fa-solid fa-user-minus"></i></button></a></td>
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){

@@ -43,7 +43,10 @@
                     <P class="card-text card-text-nombresede">{{$elemento->nombreSede}}</P>
                     <P class="card-text card-text-ciudad">{{$elemento->CIUDAD}}</P>
                     <P class="card-text card-text-direccion">{{$elemento->DIRECCION}}</P>
-                    <a href=""><button type="button" class="btns btn btn-dark">{{$elemento->SOPORTE}}</button></a>
+                    <div class="btns-card">
+                    <a href=""><button type="button" class="btns btn btn-light">{{$elemento->SOPORTE}}</button></a>
+                        <a href=""><button type="button" class="btns btn btn-light">Editar</button></a>
+                    </div>
                 </div>
             </div>
         </div>
