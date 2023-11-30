@@ -12,4 +12,6 @@ class suplementos extends Model
     protected $table = 'suplementos';
     protected $fillable = ['IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL'];
     protected $primaryKey = 'IDSUPLEMENTO';
+
+    public $timestamps = false; // Desactiva las marcas de tiempo
 }

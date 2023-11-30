@@ -71,7 +71,9 @@
                                                 <td>{{ $prenda->IMGPRENDA1 }}</td>
                                                 <td>{{ $prenda->IMGPRENDA2 }}</td>
                                                 <td>{{ $prenda->IMGPRENDA3 }}</td>
-                                                <td class="td-acciones"><button><i class="fa-solid fa-user-pen"></i></button> <a href="{{route('eliminarRopa.destroy', $prenda->IDROPA)}}" onclick="return confirm('¿Seguro que quiere eliminar esta prenda?')"><button><i class="fa-solid fa-user-minus"></i></button></a></td>                                                
+                                                <td class="td-acciones">
+                                                <a href="{{ route('ropaAdmin.edit', $prenda->IDROPA) }}"><button><i class="fa-solid fa-user-pen"></i></button></a>
+                                                <a href="{{route('eliminarRopa.destroy', $prenda->IDROPA)}}" onclick="return confirm('¿Seguro que quiere eliminar esta prenda?')"><button><i class="fa-solid fa-user-minus"></i></button></a></td>                                                
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){

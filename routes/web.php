@@ -106,6 +106,18 @@ Route::get('/editarMembresia', function () {
 Route::get('views-admin/editarCliente/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'edit'])->name('suplementosAdmin.edit');
 Route::put('suplementosAdmin/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'update'])->name('suplementosAdmin.update');
 
+// Editar Ropa
+
+Route::get('views-admin/editarRopa/{IDROPA}', [App\Http\Controllers\ropaAdminController::class, 'edit'])->name('ropaAdmin.edit');
+Route::put('ropaAdmin/{IDROPA}', [App\Http\Controllers\ropaAdminController::class, 'update'])->name('ropaAdmin.update');
+
+// Editar Elementos
+
+Route::get('views-admin/editarElemento/{IDELEMENTO}', [App\Http\Controllers\elementosController::class, 'edit'])->name('elementos.edit');
+Route::put('elementos/{IDELEMENTO}', [App\Http\Controllers\elementosController::class, 'update'])->name('elementos.update');
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

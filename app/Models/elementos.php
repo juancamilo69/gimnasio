@@ -10,5 +10,5 @@ class elementos extends Model
     use HasFactory;
 
     protected $primaryKey = 'IDELEMENTO';
-    protected $fillable = ['IDSEDE', 'NOMBRE', 'TIPO', 'USO', 'FECHACOMPRA', 'IMGELEMENTO', 'SOPORTE'];
+    protected $fillable = ['IDELEMENTO', 'IDSEDE', 'NOMBRE', 'TIPO', 'USO', 'FECHACOMPRA', 'IMGELEMENTO', 'SOPORTE'];
 }

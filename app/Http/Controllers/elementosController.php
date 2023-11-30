@@ -76,4 +76,28 @@ class elementosController extends Controller
         // Redirige a la vista de clientes o a donde desees
         return redirect()->route('elementos'); // Reemplaza 'clientes' con la ruta correcta
     }
+
+    public function edit($IDELEMENTO)
+    {
+        $elementos = elementos::find($IDELEMENTO);
+        return view('views-admin.editarElemento', compact('elementos'));
+    }
+
+    public function update(Request $request, $IDELEMENTO)
+    {
+        $elementos = elementos::find($IDELEMENTO);
+        
+        $elementos->IDSEDE = $request->input('idsede');
+        $elementos->NOMBRE = $request->input('nombre');
+        $elementos->TIPO = $request->input('tipo');
+        $elementos->USO = $request->input('uso');
+        $elementos->FECHACOMPRA = $request->input('fechacompra');
+        $elementos->IMGELEMENTO = $request->input('imgelemento');
+        $elementos->SOPORTE = $request->input('soporte');
+        // Puedes agregar la lógica para manejar las imágenes si es necesario
+        
+        $elementos->save();
+
+        return redirect()->route('elementos');
+    }
 }

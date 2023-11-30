@@ -45,7 +45,8 @@
                     <P class="card-text card-text-direccion">{{$elemento->DIRECCION}}</P>
                     <div class="btns-card">
                     <a href=""><button type="button" class="btns btn btn-light">{{$elemento->SOPORTE}}</button></a>
-                        <a href=""><button type="button" class="btns btn btn-light">Editar</button></a>
+                    <a href=""><button type="button" class="btns btn btn-light">Editar</button></a>
+                    <a href=""><button type="button" class="btns btn btn-light">Eliminar</button></a>
                     </div>
                 </div>
             </div>
