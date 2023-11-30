@@ -101,6 +101,10 @@ Route::get('/editarMembresia', function () {
     return view('views-admin/editarMembresia');
 })->middleware(['auth', 'verified'])->name('editarMembresia');
 
+// Editar suplementos
+
+Route::get('views-admin/editarCliente/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'edit'])->name('suplementosAdmin.edit');
+Route::put('suplementosAdmin/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'update'])->name('suplementosAdmin.update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
