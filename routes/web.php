@@ -116,6 +116,10 @@ Route::put('ropaAdmin/{IDROPA}', [App\Http\Controllers\ropaAdminController::clas
 Route::get('views-admin/editarElemento/{IDELEMENTO}', [App\Http\Controllers\elementosController::class, 'edit'])->name('elementos.edit');
 Route::put('elementos/{IDELEMENTO}', [App\Http\Controllers\elementosController::class, 'update'])->name('elementos.update');
 
+// Editar Máquinas
+
+Route::get('views-admin/editarMaquina/{IDEQUIPO}', [App\Http\Controllers\maquinasController::class, 'edit'])->name('maquinas.edit');
+Route::put('maquinas/{IDEQUIPO}', [App\Http\Controllers\maquinasController::class, 'update'])->name('maquinas.update');
 
 
 Route::middleware('auth')->group(function () {

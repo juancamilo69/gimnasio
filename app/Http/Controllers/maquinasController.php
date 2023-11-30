@@ -77,4 +77,27 @@ class maquinasController extends Controller
         return redirect()->route('maquinas'); // Reemplaza 'clientes' con la ruta correcta
     }
 
+    public function edit($IDEQUIPO)
+    {
+        $maquinas = maquinas::find($IDEQUIPO);
+        return view('views-admin.editarMaquina', compact('maquinas'));
+    }
+
+    public function update(Request $request, $IDEQUIPO)
+    {
+        $maquinas = maquinas::find($IDEQUIPO);
+        
+        $maquinas->IDSEDE = $request->input('idsede');
+        $maquinas->NOMBREMAQUINA = $request->input('nombremaquina');
+        $maquinas->GRUPOMUSCULAR = $request->input('grupomuscular');
+        $maquinas->FECHACOMPRA = $request->input('fechacompra');
+        $maquinas->IMGMAQUINA = $request->input('imgmaquina');
+        $maquinas->SOPORTE = $request->input('soporte');
+        // Puedes agregar la lógica para manejar las imágenes si es necesario
+        
+        $maquinas->save();
+
+        return redirect()->route('maquinas');
+    }
+
 }
