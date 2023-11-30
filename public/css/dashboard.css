@@ -169,6 +169,23 @@
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
     position: relative;
     overflow: hidden;
+    transition: filter 0.5s ease;
+}
+
+.cardsede:hover {
+    filter: brightness(80%);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cardsede:hover::before {
+    content: "\f06e";
+    font-family: "FontAwesome";
+    font-size: 2em; /* Tamaño del ícono */
+    color: #fff; /* Color del ícono */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .contenedor-sedes .cardsede-tunja {
@@ -207,6 +224,7 @@
 .textos-introduccion-servicios {
     text-align: center;
     margin-bottom: 55px;
+    color: #2a324b;
 }
 
 .contenedor-introduccion-servicios h3 {
@@ -227,6 +245,7 @@
 .cards-servicios-contenedor .card {
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
+    color: #2a324b;
 }
 
 .cards-servicios-contenedor .card img {
@@ -254,6 +273,7 @@
     font-size: 35px;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 50px;
+    color: #2a324b;
 }
 
 /* footer */
