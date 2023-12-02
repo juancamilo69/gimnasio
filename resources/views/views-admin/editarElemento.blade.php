@@ -27,17 +27,6 @@
 
         <label for="soporte">Soporte:</label>
         <input type="text" name="soporte" value="{{ $elementos->SOPORTE }}" required>
-<!-- 
-        <label for="imgSuplemento">Imagen 1 de la prenda:</label>
-        <input type="text" name="imgPrenda1" value="{{ $prendas->IMGPRENDA1 }}">
-
-        <label for="imgSuplemento">Imagen 2 de la prenda:</label>
-        <input type="text" name="imgPrenda2" value="{{ $prendas->IMGPRENDA2 }}">
-
-        <label for="imgSuplemento">Imagen 3 de la prenda:</label>
-        <input type="text" name="imgPrenda3" value="{{ $prendas->IMGPRENDA3 }}">
-    
--->
 
         <button type="submit">Actualizar</button>
     </form>

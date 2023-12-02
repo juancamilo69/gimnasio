@@ -22,7 +22,7 @@ class clientesController extends Controller
             ->join('users', 'membresias.id', '=', 'users.id')
             ->join('tipomembresias', 'membresias.IDTIPOSMEMBRESIAS', '=', 'tipomembresias.IDTIPOSMEMBRESIAS')
             ->join('sedes', 'users.IDSEDE', '=', 'sedes.IDSEDE')
-            ->select('users.id', 'users.name', 'users.email', 'sedes.CIUDAD', 'sedes.direccion', 'tipomembresias.NOMBREMEMBRESIA', 'tipomembresias.PRECIO', 'tipomembresias.DURACIONMESES', 'tipomembresias.PLANPAREJA', 'membresias.FECHAMEMBRESIAINICIO', 'FECHAMEMBRESIAFINAL')
+            ->select('membresias.IDMEMBRESIA', 'users.id', 'users.name', 'users.email', 'sedes.CIUDAD', 'sedes.direccion', 'tipomembresias.NOMBREMEMBRESIA', 'tipomembresias.PRECIO', 'tipomembresias.DURACIONMESES', 'tipomembresias.PLANPAREJA', 'membresias.FECHAMEMBRESIAINICIO', 'FECHAMEMBRESIAFINAL')
             ->where('tipomembresias.PLANPAREJA', '=', 'No')
             ->get();        
          } else {
@@ -31,7 +31,7 @@ class clientesController extends Controller
             ->join('users as cliente2', 'membresias.id2', '=', 'cliente2.id')
             ->join('tipomembresias', 'membresias.IDTIPOSMEMBRESIAS', '=', 'tipomembresias.IDTIPOSMEMBRESIAS')
             ->join('sedes', 'cliente1.IDSEDE', '=', 'sedes.IDSEDE')
-            ->select('cliente1.name', 'cliente2.name as name2', 'cliente1.email', 'cliente2.email as email2', 'sedes.CIUDAD', 'sedes.direccion', 'tipomembresias.NOMBREMEMBRESIA', 'tipomembresias.PRECIO', 'tipomembresias.DURACIONMESES', 'tipomembresias.PLANPAREJA', 'membresias.FECHAMEMBRESIAINICIO', 'FECHAMEMBRESIAFINAL')
+            ->select('membresias.IDMEMBRESIA', 'cliente1.name', 'cliente2.name as name2', 'cliente1.email', 'cliente2.email as email2', 'sedes.CIUDAD', 'sedes.direccion', 'tipomembresias.NOMBREMEMBRESIA', 'tipomembresias.PRECIO', 'tipomembresias.DURACIONMESES', 'tipomembresias.PLANPAREJA', 'membresias.FECHAMEMBRESIAINICIO', 'FECHAMEMBRESIAFINAL')
             ->where('tipomembresias.PLANPAREJA', '=', 'Si')
             ->get();       
         }
@@ -109,24 +109,59 @@ class clientesController extends Controller
         return redirect()->route('clientes'); // Reemplaza 'clientes' con la ruta correcta
     }
 
-    public function edit(string $id)
+    public function edit($IDMEMBRESIA)
     {
-        $clientes = users::findOrFail($id);
+        $membresia = membresias::find($IDMEMBRESIA);
+        
+        // Obtener datos del usuario y la sede asociada a la membresía
+        $usuario = users::find($membresia->id);
+        $sede = sedes::find($usuario->IDSEDE);
+        
+        // Obtener datos del segundo usuario si el tipo de membresía es 6 (o el que corresponda)
+        $usuario2 = null;
+        if ($membresia->IDTIPOSMEMBRESIAS == 6 && !is_null($membresia->id2)) {
+            $usuario2 = users::find($membresia->id2);
+        }
+    
         $sedes = sedes::all();
         $membresiasData = Tipomembresias::all();
-        return view('views-admin/editarCliente', ['cliente' => $clientes, 'sedes' => $sedes, 'membresiasData' => $membresiasData]);
-    }
-
-    public function update(Request $request, string $id)
-    {
-        $clientes = users::findOrFail($id);
-        // return $request->input('sede');
-        $clientes -> update ([
-            'name' => $request->input('name'),
-            'IDSEDE' => $request->input('sede'),
-            'email' => $request->input('email'),
-            'password' => Hash::make($request->input('password')),
+        $clientes = users::all();
+        
+        return view('views-admin/editarCliente', [
+            'membresia' => $membresia,
+            'usuario' => $usuario,
+            'usuario2' => $usuario2,
+            'sede' => $sede,
+            'sedes' => $sedes,
+            'membresiasData' => $membresiasData
         ]);
+    }
+    
+    
+    
+
+
+    public function update(Request $request, $IDMEMBRESIA)
+    {
+        $usuarios = membresias::find($IDMEMBRESIA);
+
+        // Obtener datos del usuario y la sede asociada a la membresía
+        $usuario = users::find($membresia->id);
+        $sede = sedes::find($usuario->IDSEDE);
+        
+        $usuarios->IDTIPOSMEMBRESIAS = $request->input('IDTIPOSMEMBRESIAS');
+      - $usuarios->FECHAMEMBRESIAINICIO = $request->input('fechamembresiainicio');
+        $usuarios->FECHAMEMBRESIAFINAL = $request->input('fechamembresiafinal');
+
+      - $usuario->name = $request->input('name');
+        $usuario->email = $request->input('email');
+        
+      - $sede->IDSEDE = $request->input('sede');
+        // Puedes agregar la lógica para manejar las imágenes si es necesario
+        
+        $usuarios->save();
+        $usuario->save();
+        $sede->save();
 
         return redirect()->route('clientes');
     }    

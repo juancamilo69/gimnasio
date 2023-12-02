@@ -16,7 +16,7 @@ class maquinasController extends Controller
 
         $maquinas = DB::table('maquinas')
         ->join('sedes', 'maquinas.IDSEDE', '=', 'sedes.IDSEDE')
-        ->select('maquinas.NOMBREMAQUINA', 'maquinas.GRUPOMUSCULAR', 'maquinas.FECHACOMPRA', 'maquinas.IMGMAQUINA', 'maquinas.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
+        ->select('maquinas.IDEQUIPO', 'maquinas.NOMBREMAQUINA', 'maquinas.GRUPOMUSCULAR', 'maquinas.FECHACOMPRA', 'maquinas.IMGMAQUINA', 'maquinas.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
         ->where('sedes.IDSEDE', '=', '1')
         ->get();     
 
@@ -24,7 +24,7 @@ class maquinasController extends Controller
 
         $maquinas = DB::table('maquinas')
         ->join('sedes', 'maquinas.IDSEDE', '=', 'sedes.IDSEDE')
-        ->select('maquinas.NOMBREMAQUINA', 'maquinas.GRUPOMUSCULAR', 'maquinas.FECHACOMPRA', 'maquinas.IMGMAQUINA', 'maquinas.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
+        ->select('maquinas.IDEQUIPO', 'maquinas.NOMBREMAQUINA', 'maquinas.GRUPOMUSCULAR', 'maquinas.FECHACOMPRA', 'maquinas.IMGMAQUINA', 'maquinas.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
         ->where('sedes.IDSEDE', '=', '2')
         ->get();  
 
@@ -32,7 +32,7 @@ class maquinasController extends Controller
 
         $maquinas = DB::table('maquinas')
         ->join('sedes', 'maquinas.IDSEDE', '=', 'sedes.IDSEDE')
-        ->select('maquinas.NOMBREMAQUINA', 'maquinas.GRUPOMUSCULAR', 'maquinas.FECHACOMPRA', 'maquinas.IMGMAQUINA', 'maquinas.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
+        ->select('maquinas.IDEQUIPO', 'maquinas.NOMBREMAQUINA', 'maquinas.GRUPOMUSCULAR', 'maquinas.FECHACOMPRA', 'maquinas.IMGMAQUINA', 'maquinas.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
         ->where('sedes.IDSEDE', '=', '3')
         ->get(); 
         }

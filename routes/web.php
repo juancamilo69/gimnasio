@@ -103,7 +103,7 @@ Route::get('/editarMembresia', function () {
 
 // Editar suplementos
 
-Route::get('views-admin/editarCliente/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'edit'])->name('suplementosAdmin.edit');
+Route::get('views-admin/editarSuplemento/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'edit'])->name('suplementosAdmin.edit');
 Route::put('suplementosAdmin/{IDSUPLEMENTO}', [App\Http\Controllers\suplementosAdminController::class, 'update'])->name('suplementosAdmin.update');
 
 // Editar Ropa
@@ -120,6 +120,11 @@ Route::put('elementos/{IDELEMENTO}', [App\Http\Controllers\elementosController::
 
 Route::get('views-admin/editarMaquina/{IDEQUIPO}', [App\Http\Controllers\maquinasController::class, 'edit'])->name('maquinas.edit');
 Route::put('maquinas/{IDEQUIPO}', [App\Http\Controllers\maquinasController::class, 'update'])->name('maquinas.update');
+
+// Editar Clientes
+
+Route::get('views-admin/editarCliente/{id}', [App\Http\Controllers\clientesController::class, 'edit'])->name('editarCliente');
+Route::put('/actualizarCliente/{id}', [App\Http\Controllers\clientesController::class, 'update'])->name('actualizarCliente');
 
 
 Route::middleware('auth')->group(function () {
@@ -209,10 +214,5 @@ Route::get('/', function () {
     return view('welcome', ['membresiasData' => $membresiasData]);
 });
 
-// Edit
-Route::get('views-admin/editarCliente/{id}', [App\Http\Controllers\clientesController::class, 'edit'])->name('editarCliente');
-
-// Actualizar
-Route::post('/actualizarCliente/{id}', [App\Http\Controllers\clientesController::class, 'update'])->name('actualizarCliente');
 
 require __DIR__.'/auth.php';

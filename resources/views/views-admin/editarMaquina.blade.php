@@ -23,14 +23,8 @@
         <input type="text" name="imgmaquina" value="{{ $maquinas->IMGMAQUINA }}" required>
 
         <label for="soporte">Soporte:</label>
-        <input type="Text" name="soporte" value="{{ $suplemento->SOPORTE }}" required>
+        <input type="Text" name="soporte" value="{{ $maquinas->SOPORTE }}" required>
 
-<!-- 
-        <label for="imgSuplemento">Imagen del Suplemento:</label>
-        <input type="text" name="imgSuplemento" value="{{ $suplemento->IMGSUPLEMENTO }}">
-
-        <label for="imgTablaNutricional">Imagen de la Tabla Nutricional:</label>
-        <input type="text" name="imgTablaNutricional" value="{{ $suplemento->IMGTABLANUTRICIONAL }}"> -->
 
         <button type="submit">Actualizar</button>
     </form>

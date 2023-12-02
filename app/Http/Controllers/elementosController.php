@@ -14,7 +14,7 @@ class elementosController extends Controller
         if($elementoSede == "S1" || $elementoSede == null) {
         $elementos = DB::table('elementos')
         ->join('sedes', 'elementos.IDSEDE', '=', 'sedes.IDSEDE')
-        ->select('elementos.NOMBRE as nombreElemento', 'elementos.TIPO', 'elementos.USO', 'elementos.FECHACOMPRA', 'elementos.IMGELEMENTO', 'elementos.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
+        ->select('elementos.IDELEMENTO', 'elementos.NOMBRE as nombreElemento', 'elementos.TIPO', 'elementos.USO', 'elementos.FECHACOMPRA', 'elementos.IMGELEMENTO', 'elementos.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
         ->where('sedes.IDSEDE', '=', '1')
         ->get();
 
@@ -22,7 +22,7 @@ class elementosController extends Controller
 
         $elementos = DB::table('elementos')
         ->join('sedes', 'elementos.IDSEDE', '=', 'sedes.IDSEDE')
-        ->select('elementos.NOMBRE as nombreElemento', 'elementos.TIPO', 'elementos.USO', 'elementos.FECHACOMPRA', 'elementos.IMGELEMENTO', 'elementos.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
+        ->select('elementos.IDELEMENTO', 'elementos.NOMBRE as nombreElemento', 'elementos.TIPO', 'elementos.USO', 'elementos.FECHACOMPRA', 'elementos.IMGELEMENTO', 'elementos.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
         ->where('sedes.IDSEDE', '=', '2')
         ->get();  
 
@@ -30,7 +30,7 @@ class elementosController extends Controller
 
         $elementos = DB::table('elementos')
         ->join('sedes', 'elementos.IDSEDE', '=', 'sedes.IDSEDE')
-        ->select('elementos.NOMBRE as nombreElemento', 'elementos.TIPO', 'elementos.USO', 'elementos.FECHACOMPRA', 'elementos.IMGELEMENTO', 'elementos.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
+        ->select('elementos.IDELEMENTO', 'elementos.NOMBRE as nombreElemento', 'elementos.TIPO', 'elementos.USO', 'elementos.FECHACOMPRA', 'elementos.IMGELEMENTO', 'elementos.SOPORTE', 'sedes.NOMBRE as nombreSede', 'sedes.CIUDAD', 'sedes.DIRECCION')
         ->where('sedes.IDSEDE', '=', '3')
         ->get(); 
         }

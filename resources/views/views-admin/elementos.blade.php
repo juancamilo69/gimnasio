@@ -29,9 +29,9 @@
             </div>
         </div>
 <!-- CARD ELEMENTOS -->
-<div class="cards-membresias-contenedor row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="cardId">
+<div class="cards-membresias-contenedor row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="cardId">
     @foreach ($elementos as $elemento)
-        <div class="col col-sm-6 col-md-4">
+        <div class="col col-sm-6 col-md-4 col-lg-3">
             <div class="card h-100 w-100 text-white bg-dark">
                 <img src="{{$elemento->IMGELEMENTO}}" class="card-img-top img-fixed-size" alt="...">
                 <div class="card-body">
