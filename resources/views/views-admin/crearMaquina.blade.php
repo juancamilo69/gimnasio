@@ -42,9 +42,9 @@
 </div>
 
 <div class="text-end col-12">
-              <button class="btn btn-primary" type="submit">Crear</button>
-        
+  <button class="btn btn-primary" type="submit">Crear</button>
 </div>
+
 </form>
 </div>
 

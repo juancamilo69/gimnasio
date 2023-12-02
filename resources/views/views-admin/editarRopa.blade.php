@@ -3,48 +3,85 @@
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')
-    <form action="{{ route('ropaAdmin.update', $prendas->IDROPA) }}" method="post">
-        @csrf
-        @method('PUT')
+<link rel="stylesheet" href="{{ asset('css/formularios/editarRopa.css') }}">
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" value="{{ $prendas->NOMBRE }}" required>
+    <div class="form-content container mt-5">
 
-        <label for="tipo">Tipo:</label>
-        <input type="text" name="tipo" value="{{ $prendas->TIPO }}" required>
+        <div class="mb-4">
+        <h2 class="text-center">Formulario de Actualización de Ropa</h2>
+        <p class="lead text-center">Por favor, altere los campos necesarios para actualizar en la base de datos.</p>
+        </div> 
 
-        <label for="descripcion">Descripción:</label>
-        <textarea name="descripcion" required>{{ $prendas->DESCRIPCION }}</textarea>
-
-        <label for="stock">Stock:</label>
-        <input type="number" name="stock" value="{{ $prendas->STOCK }}" required>
-
-        <label for="precio">Precio:</label>
-        <input type="text" name="precio" value="{{ $prendas->PRECIO }}" required>
-
-        <label for="talla">Talla:</label>
-        <input type="text" name="talla" value="{{ $prendas->TALLA }}" required>
-
-        <label for="color">Color:</label>
-        <input type="text" name="color" value="{{ $prendas->COLOR }}" required>
-
-        <label for="sexo">Marca:</label>
-        <input type="text" name="sexo" value="{{ $prendas->SEXO }}" required>
-
-        <label for="material">Material:</label>
-        <input type="text" name="material" value="{{ $prendas->MATERIAL }}" required>
-<!-- 
-        <label for="imgSuplemento">Imagen 1 de la prenda:</label>
-        <input type="text" name="imgPrenda1" value="{{ $prendas->IMGPRENDA1 }}">
-
-        <label for="imgSuplemento">Imagen 2 de la prenda:</label>
-        <input type="text" name="imgPrenda2" value="{{ $prendas->IMGPRENDA2 }}">
-
-        <label for="imgSuplemento">Imagen 3 de la prenda:</label>
-        <input type="text" name="imgPrenda3" value="{{ $prendas->IMGPRENDA3 }}">
+        <form action="{{ route('ropaAdmin.update', $prendas->IDROPA) }}" method="post">
+            @csrf
+            @method('PUT')
     
--->
-
-        <button type="submit">Actualizar</button>
-    </form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $prendas->NOMBRE }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo:</label>
+                <input type="text" class="form-control" id="tipo" name="tipo" value="{{ $prendas->TIPO }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <textarea class="form-control" id="descripcion" name="descripcion" required>{{ $prendas->DESCRIPCION }}</textarea>
+            </div>
+    
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock:</label>
+                <input type="number" class="form-control" id="stock" name="stock" value="{{ $prendas->STOCK }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio:</label>
+                <input type="text" class="form-control" id="precio" name="precio" value="{{ $prendas->PRECIO }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="talla" class="form-label">Talla:</label>
+                <input type="text" class="form-control" id="talla" name="talla" value="{{ $prendas->TALLA }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="color" class="form-label">Color:</label>
+                <input type="text" class="form-control" id="color" name="color" value="{{ $prendas->COLOR }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="sexo" class="form-label">Sexo:</label>
+                <input type="text" class="form-control" id="sexo" name="sexo" value="{{ $prendas->SEXO }}" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="material" class="form-label">Material:</label>
+                <input type="text" class="form-control" id="material" name="material" value="{{ $prendas->MATERIAL }}" required>
+            </div>
+    
+            <!-- Comenté las imágenes según lo indicado -->
+            <!--
+            <div class="mb-3">
+                <label for="imgPrenda1" class="form-label">Imagen 1 de la prenda:</label>
+                <input type="text" class="form-control" id="imgPrenda1" name="imgPrenda1" value="{{ $prendas->IMGPRENDA1 }}">
+            </div>
+    
+            <div class="mb-3">
+                <label for="imgPrenda2" class="form-label">Imagen 2 de la prenda:</label>
+                <input type="text" class="form-control" id="imgPrenda2" name="imgPrenda2" value="{{ $prendas->IMGPRENDA2 }}">
+            </div>
+    
+            <div class="mb-3">
+                <label for="imgPrenda3" class="form-label">Imagen 3 de la prenda:</label>
+                <input type="text" class="form-control" id="imgPrenda3" name="imgPrenda3" value="{{ $prendas->IMGPRENDA3 }}">
+            </div>
+            -->
+    
+            <div class="text-end col-12">
+                <button class="btn btn-primary" type="submit">Actualizar</button>
+            </div>
+        </form>
+    </div>
 @endsection
