@@ -116,6 +116,15 @@
     object-fit: cover;
 }
 
+.btns-card button {
+    width: 100%;
+}
+
+.btns-card .btn-editar {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 992px) {
