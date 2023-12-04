@@ -1,0 +1,17 @@
+.contenedor-producto {
+    display: flex;
+}
+
+.contenedor-info-producto h2 {
+    font-size: 30px;
+}
+
+.contenedor-info-producto {
+    padding: 50px 0px 0px 0px;
+}
+
+.contenedor-info-producto p {
+    width: 80%;
+    margin-top: 15px;
+    color: #807f7f;
+}

@@ -19,6 +19,10 @@ use App\Models\Tipomembresias;
 //     return view('welcome');
 // });
 
+Route::get('/detalleSuplemento', function () {
+    return view('detalleSuplemento');
+})->middleware(['auth', 'verified'])->name('detalleSuplemento');
+
 Route::get('/sedes', function () {
     return view('sedes');
 })->middleware(['auth', 'verified'])->name('sedes');
