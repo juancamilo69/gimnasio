@@ -143,26 +143,31 @@ class clientesController extends Controller
 
     public function update(Request $request, $IDMEMBRESIA)
     {
+        // Obtener la membresía por su ID
         $usuarios = membresias::find($IDMEMBRESIA);
-
-        // Obtener datos del usuario y la sede asociada a la membresía
-        $usuario = users::find($membresia->id);
-        $sede = sedes::find($usuario->IDSEDE);
-        
+    
+        // Obtener datos del usuario asociado a la membresía
+        $usuario = users::find($usuarios->id);
+    
+        // Actualizar los campos de la membresía
         $usuarios->IDTIPOSMEMBRESIAS = $request->input('IDTIPOSMEMBRESIAS');
-      - $usuarios->FECHAMEMBRESIAINICIO = $request->input('fechamembresiainicio');
+        $usuarios->FECHAMEMBRESIAINICIO = $request->input('fechamembresiainicio');
         $usuarios->FECHAMEMBRESIAFINAL = $request->input('fechamembresiafinal');
-
-      - $usuario->name = $request->input('name');
+    
+        // Actualizar los campos del usuario
+        $usuario->name = $request->input('name');
         $usuario->email = $request->input('email');
-        
-      - $sede->IDSEDE = $request->input('sede');
+    
+        // Actualizar la sede del usuario
+        $usuario->IDSEDE = $request->input('sede');
+    
         // Puedes agregar la lógica para manejar las imágenes si es necesario
-        
+    
+        // Guardar los cambios en la base de datos
         $usuarios->save();
         $usuario->save();
-        $sede->save();
-
+    
+        // Resto del código...
         return redirect()->route('clientes');
-    }    
+    }
 }

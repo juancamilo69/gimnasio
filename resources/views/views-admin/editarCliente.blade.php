@@ -12,7 +12,7 @@
         <p class="lead text-center">Edita los siguientes campos para actualizar la información del cliente.</p>
     </div>
 
-    <form action="{{ route('editarCliente', $membresia->IDMEMBRESIA) }}" method="POST">
+    <form action="{{ route('actualizarCliente', $membresia->IDMEMBRESIA) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
