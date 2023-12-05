@@ -37,10 +37,11 @@
                     <div class="col-md-6">
                         <div class="contenedor-producto">
                             <div class="contenedor-info-producto">
-                                <h2 class="nombre-producto">Name</h2>
-                                <h3>Tipo<span> | </span>Marca</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-                                <h2 class="precio-producto">$50 dls</h2>
+
+                                <h2 class="nombre-producto">{{ $suplemento->NOMBRE }}</h2>
+                                <h3>{{ $suplemento->TIPO }} <span> | </span>{{ $suplemento->MARCA }}</h3>
+                                <p>{{ $suplemento->DESCRIPCION }}</p>
+                                <h2 class="precio-producto">${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</h2>
                             </div>
                         </div>
                     </div>

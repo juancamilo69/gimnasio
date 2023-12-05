@@ -149,6 +149,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// detalleSuplemento
+Route::get('/detalleSuplemento/{id}', 'App\Http\Controllers\suplementosController@showDetalle')->name('detalleSuplemento');
+
+
+
 // Rutas para información de las membresías
 
 Route::get('/dashboard', [App\Http\Controllers\infoMembresiasController::class, 'index'])->name('dashboard');
