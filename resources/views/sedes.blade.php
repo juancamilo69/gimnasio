@@ -16,34 +16,42 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                <div class="contenedor-ciudades">
-
-                <a href="{{ route('sedesTunja') }}">
-                <div class="card card-ciudad-tunja text-bg-dark">
-                <img src="{{ asset('images/banner/banner1.jpg') }}" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Tunja</h5>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="p-6 text-gray-900">
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-6">
+                        <div class="contenedor-ciudades">
+                            <a href="{{ route('sedesTunja') }}">
+                                <div class="card card-ciudad-tunja text-bg-dark">
+                                    <img src="https://colombiavisible.com/wp-content/uploads/2022/04/Templo-Tunja-1024x684.jpg" class="card-img" alt="...">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">Tunja</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Second Column -->
+                    <div class="col-md-6">
+                        <div class="contenedor-ciudades">
+                            <a href="{{ route('sedesBarbosa') }}">
+                                <div class="card card-ciudad-barbosa text-bg-dark">
+                                    <img src="https://turismoantioquia.travel/wp-content/uploads/2023/04/JPT2039.jpg" class="card-img" alt="...">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">Barbosa</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                </a>
-
-                <a href="{{ route('sedesBarbosa') }}"> 
-                <div class="card card-ciudad-barbosa text-bg-dark">
-                <img src="{{ asset('images/banner/banner1.jpg') }}" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Barbosa</h5>
-                </div>
-                </div>
-                </a>
-
-
-                </div>
-                </div> 
             </div>
         </div>
+    </div>
+    
     </div>
 
         <!-- Footer -->

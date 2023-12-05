@@ -121,6 +121,15 @@ table td {
 }
 
 .td-acciones {
+    text-align: center;
+}
+
+.td-acciones a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.td-acciones {
     width: 7%;
 }
 

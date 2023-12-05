@@ -234,7 +234,7 @@ Route::post('/crearSuplementos', [App\Http\Controllers\suplementosController::cl
 
 Route::get('/eliminars/{id}', [App\Http\Controllers\suplementosAdminController::class, 'destroy'])->name('suplementos.destroy');
 
-Route::get('/eliminar/{id}', [App\Http\Controllers\maquinasController::class, 'destroy'])->name('maquinas.destroy');
+Route::get('/eliminarr/{id}', [App\Http\Controllers\maquinasController::class, 'destroy'])->name('maquinas.destroy');
 
 Route::get('/eliminar/{id}', [App\Http\Controllers\elementosController::class, 'destroy'])->name('elementos.destroy');
 

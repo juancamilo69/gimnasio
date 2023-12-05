@@ -71,7 +71,7 @@
                                                 <td>{{ $usuario->FECHAMEMBRESIAFINAL }}</td>
                                                 <td class="td-acciones">
                                                 <a href="{{ route('editarCliente', $usuario->IDMEMBRESIA) }}"><i class="fa-solid fa-user-pen"></i></a> 
-                                                <button><i class="fa-solid fa-user-minus"></i></button></td>
+                                                </td>
                                             </tr>
                                             <script>
                                                 $(document).ready(function(){

@@ -31,6 +31,7 @@
                     <div class="col-md-6">
                         <div class="contenedor-producto">
                             <div class="contenedor-img-producto">
+                                <img src="{{$suplemento->IMGSUPLEMENTO}}" class="card-img-top img-fixed-size" alt="...">
                             </div>
                         </div>
                     </div>
@@ -42,12 +43,12 @@
                                 <h3>{{ $suplemento->TIPO }} <span> | </span>{{ $suplemento->MARCA }}</h3>
                                 <p>{{ $suplemento->DESCRIPCION }}</p>
                                 <h2 class="precio-producto">${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</h2>
+                                <button class="btn btn-dark btn-comprar mt-3" style="width: 50%">Comprar</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             </div>
         </div>
     </div>

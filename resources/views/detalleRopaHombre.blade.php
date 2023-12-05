@@ -31,6 +31,7 @@
                     <div class="col-md-6">
                         <div class="contenedor-producto">
                             <div class="contenedor-img-producto">
+                                <img src="{{$prenda->IMGPRENDA1}}" class="card-img-top img-fixed-size" alt="...">
                             </div>
                         </div>
                     </div>
