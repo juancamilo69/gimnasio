@@ -46,7 +46,7 @@
                     <div class="btns-card">
                     <a href=""><button type="button" class="btns btn btn-light">{{$elemento->SOPORTE}}</button></a>
                     <a href="{{ route('elementos.edit', $elemento->IDELEMENTO) }}"><button type="button" class="btns btn btn-light btn-editar">Editar</button></a>
-                    <a href=""><button type="button" class="btns btn btn-light btn-eliminar">Eliminar</button></a>
+                    <a href="{{route('elementos.destroy', $elemento->IDELEMENTO)}}" onclick="return confirm('¿Seguro que quiere eliminar este elemento?')"><button type="button" class="btns btn btn-light btn-eliminar">Eliminar</button></a>
                     </div>
                 </div>
             </div>

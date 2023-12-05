@@ -84,7 +84,7 @@
                                                           mes
                                                       @endif
                                                     </span></p>
-                        <button class="cardm-btn">Adquirir</button>
+                        <a href="{{route ('register')}}"><button class="cardm-btn">Adquirir</button></a>
                     </div>
                     </div>
                 </div>

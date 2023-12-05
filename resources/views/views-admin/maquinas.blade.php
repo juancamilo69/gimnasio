@@ -45,7 +45,7 @@
                     <div class="btns-card">
                         <a href=""><button type="button" class="btns btn btn-light">{{$maquina->SOPORTE}}</button></a>
                         <a href="{{ route('maquinas.edit', $maquina->IDEQUIPO) }}"><button type="button" class="btns btn btn-light btn-editar">Editar</button></a>
-                        <a href=""><button type="button" class="btns btn btn-light btn-eliminar">Eliminar</button></a>
+                        <a href="{{route('maquinas.destroy', $maquina->IDEQUIPO)}}" onclick="return confirm('¿Seguro que quiere eliminar esta maquina?')"><button type="button" class="btns btn btn-light btn-eliminar">Eliminar</button></a>
                     </div>    
                 </div>
             </div>

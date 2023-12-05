@@ -19,6 +19,10 @@ use App\Models\Tipomembresias;
 //     return view('welcome');
 // });
 
+Route::get('/register', function () {
+    return view('register');
+})->middleware(['auth', 'verified'])->name('register');
+
 Route::get('/detalleRopaHombre', function () {
     return view('detalleRopaHombre');
 })->middleware(['auth', 'verified'])->name('detalleRopaHombre');
@@ -220,6 +224,10 @@ Route::post('/crearSuplementos', [App\Http\Controllers\suplementosController::cl
 // Route::get('/{suplementos}/eliminar', [App\Http\Controllers\suplementosAdminController::class, 'destroy'])->name('eliminarSuplementos.destroy');
 
 Route::get('/eliminars/{id}', [App\Http\Controllers\suplementosAdminController::class, 'destroy'])->name('suplementos.destroy');
+
+Route::get('/eliminar/{id}', [App\Http\Controllers\maquinasController::class, 'destroy'])->name('maquinas.destroy');
+
+Route::get('/eliminar/{id}', [App\Http\Controllers\elementosController::class, 'destroy'])->name('elementos.destroy');
 
 Route::get('/', function () {
     $membresiasData = Tipomembresias::orderBy('PRECIO', 'ASC')->get();
