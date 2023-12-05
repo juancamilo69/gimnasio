@@ -19,6 +19,14 @@ use App\Models\Tipomembresias;
 //     return view('welcome');
 // });
 
+Route::get('/detalleRopaHombre', function () {
+    return view('detalleRopaHombre');
+})->middleware(['auth', 'verified'])->name('detalleRopaHombre');
+
+Route::get('/detalleRopaMujer', function () {
+    return view('detalleRopaMujer');
+})->middleware(['auth', 'verified'])->name('detalleRopaMujer');
+
 Route::get('/detalleSuplemento', function () {
     return view('detalleSuplemento');
 })->middleware(['auth', 'verified'])->name('detalleSuplemento');
