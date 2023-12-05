@@ -54,7 +54,7 @@
                                                           mes
                                                       @endif
                                                     </span></p>
-                        <button class="cardm-btn">Adquirir</button>
+                        <a href="{{$membresiasDatas->LINKPAGO}}"><button class="cardm-btn">Adquirir</button></a>
                     </div>
                     </div>
                 </div>

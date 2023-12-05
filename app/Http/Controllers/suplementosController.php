@@ -42,7 +42,7 @@ class suplementosController extends Controller
         } else {
 
         $suplementos = DB::table('suplementos')
-        ->select('NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
+        ->select('IDSUPLEMENTO', 'NOMBRE', 'MARCA', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'IMGSUPLEMENTO', 'IMGTABLANUTRICIONAL')
         ->where('TIPO', '=', 'Otros')
         ->get();      
         }
