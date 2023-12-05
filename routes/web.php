@@ -152,7 +152,11 @@ Route::middleware('auth')->group(function () {
 // detalleSuplemento
 Route::get('/detalleSuplemento/{id}', 'App\Http\Controllers\suplementosController@showDetalle')->name('detalleSuplemento');
 
+// detalleRopaHombre
+Route::get('/detalleRopaHombre/{id}', 'App\Http\Controllers\ropaHombreController@showDetalle')->name('detalleRopaHombre');
 
+// detalleRopaMujer
+Route::get('/detalleRopaMujer/{id}', 'App\Http\Controllers\ropaMujerController@showDetalle')->name('detalleRopaMujer');
 
 // Rutas para información de las membresías
 

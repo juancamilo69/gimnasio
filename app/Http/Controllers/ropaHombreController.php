@@ -14,7 +14,7 @@ class ropaHombreController extends Controller
         if($ropaRequest == "Camisetas" || $ropaRequest == null) {
 
         $prendas = DB::table('ropa')
-        ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
+        ->select('IDROPA','NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
         ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Camisetas')
         ->get();     
@@ -22,7 +22,7 @@ class ropaHombreController extends Controller
         } else if ($ropaRequest == "Esqueletos") {
 
         $prendas = DB::table('ropa')
-        ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA','COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
+        ->select('IDROPA','NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA','COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
         ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Esqueletos')
         ->get();        
@@ -30,7 +30,7 @@ class ropaHombreController extends Controller
         } else if ($ropaRequest == "Camisetas Oversize") {
 
         $prendas = DB::table('ropa')
-        ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA','COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
+        ->select('IDROPA','NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA','COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
         ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Camisetas Oversize')
         ->get();      
@@ -38,7 +38,7 @@ class ropaHombreController extends Controller
         } else if ($ropaRequest == "Buzos") {
 
         $prendas = DB::table('ropa')
-        ->select('NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
+        ->select('IDROPA','NOMBRE', 'TIPO', 'DESCRIPCION', 'STOCK', 'PRECIO', 'TALLA', 'COLOR', 'SEXO', 'MATERIAL', 'IMGPRENDA1', 'IMGPRENDA2', 'IMGPRENDA3')
         ->where('SEXO', '=', 'Hombre')
         ->where('TIPO', '=', 'Buzos')
         ->get();      
@@ -53,5 +53,12 @@ class ropaHombreController extends Controller
         }
 
         return view('ropaHombre', compact('prendas'));
+    }
+
+    public function showDetalle($id)
+    {
+        $prenda = ropa::find($id);
+
+        return view('detalleRopaHombre', compact('prenda'));
     }
 }
