@@ -100,4 +100,11 @@ class elementosController extends Controller
 
         return redirect()->route('elementos');
     }
+
+    public function destroy(String $IDELEMENTO) {
+        $elementos = elementos::findOrfail($IDELEMENTO);
+        $elementos -> delete();
+
+        return redirect()->route('elementos'); 
+    }
 }

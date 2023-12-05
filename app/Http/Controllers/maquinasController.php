@@ -100,4 +100,11 @@ class maquinasController extends Controller
         return redirect()->route('maquinas');
     }
 
+    public function destroy(String $IDEQUIPO) {
+        $maquinas = maquinas::findOrfail($IDEQUIPO);
+        $maquinas -> delete();
+
+        return redirect()->route('maquinas'); 
+    }
+
 }
