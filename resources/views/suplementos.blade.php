@@ -52,7 +52,7 @@
                             <h5 class="card-title">{{$suplemento->NOMBRE}}</h5>
                             <div class="d-flex">
                             <P class="card-text card-text-precio mt-4">${{ number_format($suplemento->PRECIO, 0, ',', '.') }}</P>
-                            <a href="{{route('detalleSuplemento')}}"><button type="button" class="btn btn-dark btn-comprar ms-auto mt-4">Detalles</button></a>
+                            <a href="{{route('detalleSuplemento')}}" class="ms-auto"><button type="button" class="btn btn-dark btn-comprar">Detalles</button></a>
                             </div>
                         </div>
                         </div>
