@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Crear Clientes - Panel de administración - Reich gym</title>
+
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')

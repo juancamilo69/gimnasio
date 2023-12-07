@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Bienvenido a Reich gym</title>
+
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 <link rel="stylesheet" href="{{ asset('css/general.css') }}">

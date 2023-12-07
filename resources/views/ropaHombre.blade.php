@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Tienda de Ropa Hombre - Reich Gym</title>
+
 <x-app-layout>
 
 <!-- Custom Css -->

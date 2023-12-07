@@ -8,6 +8,8 @@
     <title>Reich GYM</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('css/plantilla-viewAdmin.Css') }}">
+    <!-- Icon web -->
+    <link rel="icon" href="{{ asset('images/logos/logo.png') }}" type="image/x-icon">
     <!-- Default -->
     @extends('default')
 

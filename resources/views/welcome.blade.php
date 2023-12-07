@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Gym Reich</title>
+        <title>Gym Reich - El imperio de la disciplina</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -13,6 +13,10 @@
         <!-- Custom Css -->
         <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
         <link rel="stylesheet" href="{{ asset('css/general.css') }}">
+        
+        <!-- Icon web -->
+        <link rel="icon" href="{{ asset('images/logos/logo.png') }}" type="image/x-icon">
+
         <!-- Defautl Css -->
         @extends('default')
 

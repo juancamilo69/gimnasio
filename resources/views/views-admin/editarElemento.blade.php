@@ -1,4 +1,6 @@
-<!-- views-admin/editarElemento.blade.php -->
+<!-- Título web -->
+<title>Editar Elementos - Panel de administración - Reich gym</title>
+
 
 @extends('../plantilla-viewAdmin')
 

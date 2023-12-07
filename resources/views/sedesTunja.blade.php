@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Sedes en Tunja - Reich gym</title>
+
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('css/general.css') }}">
 <link rel="stylesheet" href="{{ asset('css/sedes.css') }}">

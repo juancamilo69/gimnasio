@@ -81,9 +81,23 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
+        <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Inicio') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('sedes')" :active="request()->routeIs('sedes')">
+                        {{ __('Sedes') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('suplementos')" :active="request()->routeIs('suplementos')">
+                        {{ __('Suplementos') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('sexoRopa')" :active="request()->routeIs('sexoRopa')">
+                        {{ __('Ropa') }}
+                    </x-responsive-nav-link>
+                    @role('administrador')
+                    <x-responsive-nav-link :href="route('viewAdmin')" :active="request()->routeIs('viewAdmin')">
+                        {{ __('Admin') }}
+                    </x-responsive-nav-link>
+                    @endrole
         </div>
 
         <!-- Responsive Settings Options -->

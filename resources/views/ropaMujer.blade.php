@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Tienda de Ropa Mujer - Reich Gym</title>
+
 <x-app-layout>
 
 <!-- Custom Css -->
@@ -54,7 +57,7 @@
                             <p class="card-text-color">{{$prenda->COLOR}}</p>
                             <div class="d-flex">
                             <P class="card-text card-text-precio mt-4">${{ number_format($prenda->PRECIO, 0, ',', '.') }}</P>
-                            <a href="{{ route('detalleRopaHombre', ['id' => $prenda->IDROPA]) }}"><button type="button" class="btn btn-dark btn-comprar ms-auto mt-4">Detalles</button></a>
+                            <a href="{{ route('detalleRopaMujer', ['id' => $prenda->IDROPA]) }}"><button type="button" class="btn btn-dark btn-comprar ms-auto mt-4">Detalles</button></a>
                             </div>
                         </div>
                         </div>

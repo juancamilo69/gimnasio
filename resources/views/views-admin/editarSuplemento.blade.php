@@ -1,4 +1,6 @@
-<!-- views-admin/editSuplemento.blade.php -->
+<!-- Título web -->
+<title>Editar Suplementos - Panel de administración - Reich gym</title>
+
 
 @extends('../plantilla-viewAdmin')
 

@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>{{ $prenda->NOMBRE }} - Unidad a ${{ number_format($prenda->PRECIO, 0, ',', '.') }}</title>
+
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('css/general.css') }}">
 <link rel="stylesheet" href="{{ asset('css/detalleRopaMujer.css') }}">

@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Elementos - Panel de administración - Reich gym</title>
+
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')

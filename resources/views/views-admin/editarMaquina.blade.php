@@ -1,4 +1,6 @@
-<!-- views-admin/editarMaquina.blade.php -->
+<!-- Título web -->
+<title>Editar Máquinas - Panel de administración - Reich gym</title>
+
 
 @extends('../plantilla-viewAdmin')
 

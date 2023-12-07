@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Clientes en Plan pareja - Panel de administración - Reich gym</title>
+
 @extends('../plantilla-viewAdmin')
 
 @section('contenido')

@@ -14,7 +14,6 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="icon" href="{{ asset('images/logos/logo.png') }}" type="image/x-icon">
-
         <!-- Custom Css -->
     </head>
     <body class="font-sans antialiased">

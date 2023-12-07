@@ -1,3 +1,6 @@
+<!-- Título web -->
+<title>Tienda de Ropa - Reich Gym</title>
+
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('css/general.css') }}">
 <link rel="stylesheet" href="{{ asset('css/sexoRopa.css') }}">

@@ -1,3 +1,6 @@
+<!-- Icon web -->
+<link rel="icon" href="{{ asset('images/logos/logo.png') }}" type="image/x-icon">
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
